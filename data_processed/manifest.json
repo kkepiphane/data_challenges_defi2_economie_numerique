@@ -1,0 +1,137 @@
+{
+  "population_hierarchie": {
+    "lignes": 759,
+    "colonnes": [
+      "ligne_source",
+      "niveau",
+      "libelle_source",
+      "population",
+      "parent",
+      "region_bdd",
+      "prefecture_bdd",
+      "commune_bdd",
+      "correction"
+    ]
+  },
+  "population_region": {
+    "lignes": 5,
+    "colonnes": [
+      "region",
+      "population",
+      "regions_rgph"
+    ]
+  },
+  "population_prefecture": {
+    "lignes": 39,
+    "colonnes": [
+      "region",
+      "prefecture",
+      "population",
+      "libelle_source",
+      "region_rgph"
+    ]
+  },
+  "population_commune": {
+    "lignes": 116,
+    "colonnes": [
+      "region",
+      "prefecture",
+      "unite_commune",
+      "communes_bdd",
+      "population",
+      "libelle_source",
+      "correction"
+    ]
+  },
+  "commune_vers_unite": {
+    "lignes": 117,
+    "colonnes": [
+      "commune",
+      "unite_commune"
+    ]
+  },
+  "series_internet_bm": {
+    "lignes": 64,
+    "colonnes": [
+      "annee",
+      "valeur_pct",
+      "indicateur",
+      "source",
+      "observation"
+    ]
+  },
+  "series_telecom": {
+    "lignes": 230,
+    "colonnes": [
+      "indicateur_source",
+      "unite_source",
+      "annee",
+      "valeur",
+      "fichier",
+      "famille",
+      "libelle",
+      "groupe",
+      "operateur_source",
+      "technologie",
+      "unite",
+      "statut_qualite"
+    ]
+  },
+  "agents_mobile_money": {
+    "lignes": 19788,
+    "colonnes": [
+      "agent_id",
+      "region",
+      "prefecture",
+      "commune",
+      "canton",
+      "operateur_source",
+      "sert_togocom",
+      "sert_moov",
+      "lon",
+      "lat",
+      "classe_operateur",
+      "unite_commune",
+      "prefecture_geom",
+      "coherence_geo",
+      "dist_km_BQ_ACT",
+      "dist_km_BQ_NR",
+      "dist_km_BQ_NOP",
+      "dist_km_MF_ACT",
+      "dist_km_MF_NR",
+      "dist_km_MF_NOP",
+      "dist_km_MU_ACT",
+      "dist_km_MU_NR",
+      "dist_km_MU_NOP",
+      "dist_km_AS_ACT",
+      "dist_km_AS_NR",
+      "dist_km_AS_NOP"
+    ]
+  },
+  "etablissements_financiers": {
+    "lignes": 738,
+    "colonnes": [
+      "etab_id",
+      "nom",
+      "localite",
+      "region",
+      "prefecture",
+      "commune",
+      "canton",
+      "categorie",
+      "categorie_source",
+      "statut_source",
+      "statut_groupe",
+      "jours_ouverture",
+      "nb_jours_ouverture",
+      "ouvert_samedi",
+      "ouvert_dimanche",
+      "jours_renseignes",
+      "lon",
+      "lat",
+      "unite_commune",
+      "prefecture_geom",
+      "coherence_geo"
+    ]
+  }
+}

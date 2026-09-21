@@ -1,0 +1,231 @@
+indicateur_source,unite_source,annee,valeur,fichier,famille,libelle,groupe,operateur_source,technologie,unite,statut_qualite
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2013,348192.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2014,609095.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2015,902748.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2016,1570153.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2017,2655799.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2018,3686211.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet Fixe et Mobile (Toutes technologies),Nombre,2019,3411809.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet fixe + mobile,Marché,Ensemble du marché,Toutes,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2013,161877.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2014,255622.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2015,497941.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2016,1486188.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2017,2066408.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2018,2549258.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet haut débit Fixe et Mobile,Nombre,2019,2082203.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet haut débit fixe + mobile,Marché,Ensemble du marché,Haut débit,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2013,279437.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2014,526984.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2015,836676.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2016,1521390.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2017,2605249.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2018,3660055.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Toutes technologies),Nombre,2019,3379910.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile (toutes technologies),Marché,Ensemble du marché,Mobile,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2013,130019.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2014,210448.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2015,431869.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2016,1437425.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2017,2015858.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2018,2524282.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+T abonnés Internet mobiles (Haut débit),Nombre,2019,2050304.0,observationdata-cxnvmoc.csv,Internet — abonnés,Abonnés Internet mobile haut débit (3G + 4G),Marché,Ensemble du marché,Mobile haut débit,abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2013,39594.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2014,31610.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2015,23096.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2016,15350.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2017,12011.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2018,29489.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS /EDGE Togo Cellulaire,Nombre,2019,1134.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Togocom,Togocom,Togo Cellulaire,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2013,109824.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2014,284926.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2015,381711.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2016,68615.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2017,577380.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2018,1106284.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Abonnés GPRS/EDGE Atlantique Telecom,Nombre,2019,1328472.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Abonnés 2G (GPRS/EDGE) — Moov,Moov,Atlantique Telecom,2G (GPRS/EDGE),abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2013,130019.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2014,210448.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2015,431869.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2016,1142917.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2017,1610821.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2018,1932767.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Togo Cellulaire,Nombre,2019,1242250.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Togocom,Togocom,Togo Cellulaire,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2013,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2014,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2015,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2016,294508.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2017,405037.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2018,467873.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 3G Atlantique Telecom,Nombre,2019,633580.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 3G — Moov,Moov,Atlantique Telecom,3G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2013,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2014,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2015,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2016,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2017,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2018,123642.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Togo Cellulaire,Nombre,2019,174474.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Togocom,Togocom,Togo Cellulaire,4G,abonnés,ok
+Nombre de clients 4G Atlantique Telecom,Nombre,2013,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Moov,Moov,Atlantique Telecom,4G,abonnés,serie_incomplete
+Nombre de clients 4G Atlantique Telecom,Nombre,2014,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Moov,Moov,Atlantique Telecom,4G,abonnés,serie_incomplete
+Nombre de clients 4G Atlantique Telecom,Nombre,2015,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Moov,Moov,Atlantique Telecom,4G,abonnés,serie_incomplete
+Nombre de clients 4G Atlantique Telecom,Nombre,2016,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Moov,Moov,Atlantique Telecom,4G,abonnés,serie_incomplete
+Nombre de clients 4G Atlantique Telecom,Nombre,2017,0.0,observationdata-cxnvmoc.csv,Internet mobile — technologie,Clients 4G — Moov,Moov,Atlantique Telecom,4G,abonnés,serie_incomplete
+T Togo Cellulaire,Nombre,2013,169613.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Togo Cellulaire,Nombre,2014,242058.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Togo Cellulaire,Nombre,2015,454965.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Togo Cellulaire,Nombre,2016,1158267.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Togo Cellulaire,Nombre,2017,1622832.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Togo Cellulaire,Nombre,2018,2085898.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Togo Cellulaire,Nombre,2019,1417858.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Togocom,Togocom,Togo Cellulaire,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2013,109824.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2014,284926.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2015,381711.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2016,363123.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2017,982417.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2018,1574157.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Atlantique Telecom,Nombre,2019,1962052.0,observationdata-cxnvmoc.csv,Internet mobile — opérateur,Abonnés Internet mobile — Moov,Moov,Atlantique Telecom,Mobile,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2013,65991.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2014,79621.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2015,63108.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2016,44613.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2017,45757.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2018,19340.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+T Abonnés Internet Togo Telecom,Nombre,2019,23466.0,observationdata-cxnvmoc.csv,Internet fixe,Abonnés Internet fixe — Togo Telecom,Togocom,Togo Telecom,Fixe,abonnés,ok
+LS point à point,Nombre,2013,448.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées point à point,Non précisé,Non précisé,LS point à point,liaisons,serie_incomplete
+LS Internet,Nombre,2013,93.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+LS Internet,Nombre,2014,104.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+LS Internet,Nombre,2015,100.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+LS Internet,Nombre,2016,116.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+LS Internet,Nombre,2017,133.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+LS Internet,Nombre,2018,148.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+LS Internet,Nombre,2019,183.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Liaisons spécialisées Internet,Non précisé,Non précisé,LS Internet,liaisons,ok
+Illiconet,Nombre,2013,36449.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Illiconet,Non précisé,Non précisé,Illiconet,abonnés,ok
+Illiconet,Nombre,2014,36937.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Illiconet,Non précisé,Non précisé,Illiconet,abonnés,ok
+Wimax,Nombre,2013,414.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+Wimax,Nombre,2014,494.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+Wimax,Nombre,2015,409.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+Wimax,Nombre,2016,462.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+Wimax,Nombre,2017,1068.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+Wimax,Nombre,2018,2167.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+Wimax,Nombre,2019,1806.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,WiMAX,Non précisé,Non précisé,WiMAX,abonnés,ok
+ADSL,Nombre,2013,6822.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+ADSL,Nombre,2014,9626.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+ADSL,Nombre,2015,10185.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+ADSL,Nombre,2016,8299.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+ADSL,Nombre,2017,10536.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+ADSL,Nombre,2018,14957.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+ADSL,Nombre,2019,14589.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,ADSL,Non précisé,Non précisé,ADSL,abonnés,ok
+EvDo,Nombre,2013,21765.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,EV-DO,Non précisé,Non précisé,EV-DO,abonnés,ok
+EvDo,Nombre,2014,32460.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,EV-DO,Non précisé,Non précisé,EV-DO,abonnés,ok
+EvDo,Nombre,2015,52414.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,EV-DO,Non précisé,Non précisé,EV-DO,abonnés,ok
+EvDo,Nombre,2016,35736.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,EV-DO,Non précisé,Non précisé,EV-DO,abonnés,ok
+EvDo,Nombre,2017,33928.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,EV-DO,Non précisé,Non précisé,EV-DO,abonnés,ok
+FTTH,Nombre,2013,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+FTTH,Nombre,2014,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+FTTH,Nombre,2015,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+FTTH,Nombre,2016,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+FTTH,Nombre,2017,92.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+FTTH,Nombre,2018,2068.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+FTTH,Nombre,2019,6888.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Fibre optique (FTTH),Non précisé,Non précisé,Fibre (FTTH),abonnés,ok
+Abonnés CAFE,Nombre,2013,2764.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+Abonnés CAFE,Nombre,2014,2490.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+Abonnés CAFE,Nombre,2015,2964.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+Abonnés CAFE,Nombre,2016,4150.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+Abonnés CAFE,Nombre,2017,4793.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+Abonnés CAFE,Nombre,2018,5619.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+Abonnés CAFE,Nombre,2019,2334.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « CAFE »,Non précisé,Non précisé,CAFE,abonnés,ok
+TEOLIS,Nombre,2013,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+TEOLIS,Nombre,2014,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+TEOLIS,Nombre,2015,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+TEOLIS,Nombre,2016,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+TEOLIS,Nombre,2017,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+TEOLIS,Nombre,2018,17.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+TEOLIS,Nombre,2019,154.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « TEOLIS »,Non précisé,Non précisé,TEOLIS,abonnés,ok
+GVA,Nombre,2013,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+GVA,Nombre,2014,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+GVA,Nombre,2015,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+GVA,Nombre,2016,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+GVA,Nombre,2017,0.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+GVA,Nombre,2018,1180.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+GVA,Nombre,2019,5945.0,observationdata-cxnvmoc.csv,Internet fixe — technologie,Offre « GVA »,Non précisé,Non précisé,GVA,abonnés,ok
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2013,5.24,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2014,8.95,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2015,12.94,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2016,21.98,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2017,36.31,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2018,49.55,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet (Toutes technologies) (%),Nombre,2019,44.79,observationdata-cxnvmoc.csv,Internet — pénétration,"Taux de pénétration Internet (abonnements, toutes technologies)",Marché,Ensemble du marché,Toutes,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2013,2.43,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2014,3.75,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2015,7.14,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2016,20.81,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2017,28.25,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2018,34.26,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Taux de pénétration Internet haut débit (%),Nombre,2019,27.34,observationdata-cxnvmoc.csv,Internet — pénétration,Taux de pénétration Internet haut débit (abonnements),Marché,Ensemble du marché,Haut débit,%,unite_corrigee
+Le nombre total d'abonnés fixe et mobile,Nombre,2013,3778401.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnés fixe et mobile,Nombre,2014,4272018.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnés fixe et mobile,Nombre,2015,4710010.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnés fixe et mobile,Nombre,2016,5385024.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnés fixe et mobile,Nombre,2017,6106016.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnés fixe et mobile,Nombre,2018,6182198.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnés fixe et mobile,Nombre,2019,6282788.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe + mobile,Marché,Ensemble du marché,Voix,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2013,3713908.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2014,4218707.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2015,4657321.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2016,5351215.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2017,6069905.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2018,6144507.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnées mobiles GSM,Nombre,2019,6239183.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés mobiles GSM,Marché,Ensemble du marché,Mobile,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2013,64493.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2014,53311.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2015,52689.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2016,33809.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2017,36111.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2018,37691.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Le nombre total d'abonnés fixe,Nombre,2019,43605.0,observationdata-mesqyx.csv,Marché — abonnés,Abonnés téléphonie fixe,Marché,Ensemble du marché,Fixe,abonnés,ok
+Télédensité fixe,%,2013,0.97,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité fixe,%,2014,0.78,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité fixe,%,2015,0.76,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité fixe,%,2016,0.47,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité fixe,%,2017,0.49,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité fixe,%,2018,0.51,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité fixe,%,2019,0.57,observationdata-mesqyx.csv,Marché — télédensité,Télédensité fixe,Marché,Ensemble du marché,Fixe,%,ok
+Télédensité mobile GSM,%,2013,55.87,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Télédensité mobile GSM,%,2014,61.96,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Télédensité mobile GSM,%,2015,66.78,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Télédensité mobile GSM,%,2016,74.92,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Télédensité mobile GSM,%,2017,82.98,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Télédensité mobile GSM,%,2018,82.59,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Télédensité mobile GSM,%,2019,81.91,observationdata-mesqyx.csv,Marché — télédensité,Télédensité mobile GSM,Marché,Ensemble du marché,Mobile,%,ok
+Chiffres d'Affaires,Francs CFA,2013,178673000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Chiffres d'Affaires,Francs CFA,2014,188077000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Chiffres d'Affaires,Francs CFA,2015,199604000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Chiffres d'Affaires,Francs CFA,2016,187552000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Chiffres d'Affaires,Francs CFA,2017,178483000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Chiffres d'Affaires,Francs CFA,2018,177177000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Chiffres d'Affaires,Francs CFA,2019,184914000000.0,observationdata-mesqyx.csv,Marché — finances,Chiffre d'affaires (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2013,42174000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2014,19057000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2015,31467000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2016,40889000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2017,44958000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2018,68541000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+Investissement,Francs CFA,2019,47203000000.0,observationdata-mesqyx.csv,Marché — finances,Investissement (périmètre non précisé),Marché,Ensemble du marché,Toutes,FCFA,ok
+ARPU segment mobile GSM,Francs CFA,2013,32670000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+ARPU segment mobile GSM,Francs CFA,2014,33234000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+ARPU segment mobile GSM,Francs CFA,2015,32358000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+ARPU segment mobile GSM,Francs CFA,2016,28019000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+ARPU segment mobile GSM,Francs CFA,2017,24315000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+ARPU segment mobile GSM,Francs CFA,2018,24448000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+ARPU segment mobile GSM,Francs CFA,2019,25563000000000.0,observationdata-mesqyx.csv,Marché — finances,ARPU segment mobile GSM,Marché,Ensemble du marché,Mobile,FCFA,unite_incoherente
+Part de marché Togo Cellulaire (en abonnées) en %,%,2013,54.57,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Togo Cellulaire (en abonnées) en %,%,2014,54.48,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Togo Cellulaire (en abonnées) en %,%,2015,54.03,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Togo Cellulaire (en abonnées) en %,%,2016,53.98,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Togo Cellulaire (en abonnées) en %,%,2017,51.52,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Togo Cellulaire (en abonnées) en %,%,2018,44.59,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Togo Cellulaire (en abonnées) en %,%,2019,51.44,observationdata-mesqyx.csv,Marché — parts,Part de marché — Togocom,Togocom,Togo Cellulaire,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2013,45.43,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2014,45.52,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2015,45.97,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2016,46.02,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2017,48.48,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2018,55.41,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok
+Part de marché Atlantique Telecom Togo (en abonnées),%,2019,48.56,observationdata-mesqyx.csv,Marché — parts,Part de marché — Moov,Moov,Atlantique Telecom,Mobile,%,ok

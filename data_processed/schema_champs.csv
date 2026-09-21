@@ -1,0 +1,154 @@
+fichier_donnees,fichier_schema,no,champ,question,type,present_dans_les_donnees
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,1,region_nom_bdd,,string,True
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,2,prefecture_nom_bdd,,string,True
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,3,commune_nom_bdd,,string,True
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,4,canton_nom_bdd,,string,True
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,5,id,,int,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,6,canton_id_bdd,ID du canton,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,7,etab_id_collecte,ID textuel de l'établissement,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,8,agent_id,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,9,agent_genre,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,10,agent_nom,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,11,agent_annee,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,12,agent_tel,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,13,metier,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,14,metier_spec,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,15,telephone_type,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,16,operateur,,string,True
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,17,service,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,18,id_moov,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,19,date_moov,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,20,flooz,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,21,flooz_id,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,22,flooz_date,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,23,id_togocom,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,24,vente_point_num,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,25,date_togocom,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,26,tmoney,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,27,tmoney_id,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,28,tmoney_date,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,29,transfert_international,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,30,services_autre,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,31,lieu,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,32,batiment,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,33,agent_nbr,,int,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,34,patron,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,35,patron_type,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,36,patron_entreprise,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,37,patron_personne,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,38,patron_genre,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,39,patron_tel,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,40,transfert_nbr,,int,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,41,pb,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,42,solution,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,43,remarque,,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,44,date_collecte,Date de la collecte,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,45,date_mise_a_jour_collecte,Date de la mise à jour,string,False
+file-agents-mobile-money-19-12-2024-16-55-32.csv,agents-mobile-money.csv,46,geometry,Géométrie,Point,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,1,region_nom_bdd,,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,2,prefecture_nom_bdd,,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,3,commune_nom_bdd,,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,4,canton_nom_bdd,,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,5,id,,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,6,canton_id_bdd,ID du canton,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,7,nom_localite,"Nom de la localité (Village, Ville ou Quartier si grande ville)",string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,8,etab_id_collecte,ID textuel de l'établissement,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,9,etab_nom,Nom de l'établissement,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,10,etab_adresse,Adresse de l'établissement,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,11,etab_jour,Journées d'ouverture,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,12,etab_heure,Horaires d'ouverture,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,13,interlocuteur_presence,Y a-t-il un interlocuteur?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,14,interlocuteur_responsable,L'interlocuteur est il le responsable de l'établissement ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,15,interlocuteur_fonction,"Si non, quelle est votre fonction ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,16,interlocuteur_nom_prenom,"Si non, NOM Prénom",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,17,interlocuteur_genre,"Si non, genre de l'interlocuteur",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,18,interlocuteur_tel,"Si non, numéro de téléphone",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,19,responsable_nom_prenom,NOM et Prénom du responsable,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,20,responsable_genre,Genre du responsable,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,21,responsable_fonction,Fonction du responsable,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,22,responsable_tel,Téléphone du responsable,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,23,responsable_mail,Mail du responsable,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,24,responsable_annee,Année de la prise de fonction en tant que responsable,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,25,activite_statut,Statut de l'établissement,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,26,activite_categorie,Catégorie de l'établissement,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,27,activite_categorie_banque,"Si banque, laquelle ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,28,activite_description,Pourriez vous décrire en quelques lignes les activités de l'organisation?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,29,org_creation_date,Année de création de l'établissement,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,30,org_nom,Nom de l'organisation de rattachement,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,31,org_type,Type d'organisation,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,32,org_type_autre,Autre type d'organisation,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,33,org_ministere_tutelle,"Si établissement public, ministere/institiution de tutelle",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,34,org_numero_prive,"Si établissement privé, Numéro CFE",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,35,org_fodes,"Si Association/ONG/syndicat uniquement, dans le registre FODES?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,36,org_fodes_num,"Si oui, numéro FODES",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,37,org_numero_autre,Tout autre numéro d'enregistrement,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,38,org_type2,Origine de l'organisation de rattachement,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,39,org_type2_international,"Si internationale, pays d'origine",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,40,org_qg,Localité du quartier général de l'organisation au Togo,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,41,personnel_nbr,Nombre total de personnels,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,42,personnel_femme_nbr,Nombre de personnels femmes,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,43,personnel_homme_nbr,Nombre de personnels hommes,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,44,personnel_admin_nbr,Nombre de personnels administratifs,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,45,personnel_comm_nbr,Nombre de personnels commercials,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,46,reception,Y a-t-il une réception?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,47,guichet_nbr,Nombre de guichets pour accueillir les clients,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,48,client_parti,Nombre de clients particuliers,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,49,client_prive,Nombre de clients d'entreprises,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,50,eau_acces,Y a-t-il accès à l'eau ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,51,eau_source,"Si oui, quelle source ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,52,eau_source_autre,Autre type de source d'eau,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,53,eau_pression,"Si oui, quelle pression ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,54,eau_debit,"Combien de secondes pour remplir une bouteille de 1,5L?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,55,eau_acces_temps,"Si oui, temps d'accès à l'eau ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,56,eau_qualite,"Si oui, qualité de l'eau ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,57,lavage,Y a-t-il des dispositifs pour le lavage des mains ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,58,lavage_type,Type de dispositifs de lavage de mains,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,59,lavage_type_autre,Autre type de lavage de mains,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,60,elec_acces,Y a-t-il accès à l'électricité ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,61,elec_source,"Si oui, quelle source d'électricité ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,62,elec_qualite,"Si oui, qualité d'accès ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,63,elec_acces_temps,"Si oui, temps d'accès à l'électricité",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,64,internet,Y a-t-il un réseau internet dédié?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,65,internet_type,"Si oui, type d'accès dédié ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,66,internet_type_autre,Autre type d'internet dédié,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,67,internet_type_fournisseur,"Si oui, fourni par qui?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,68,couverture,Recevez vous internet ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,69,couverture_type,"Si oui, quel type ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,70,couverture_nom,"Si oui, quels réseaux disponibles ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,71,ordinateur_portable_nbr,Nombre d'ordinateurs portables,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,72,ordinateur_portable_fonctionnel_nbr,Nombre d'ordinateurs portables fonctionnels,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,73,ordinateur_poste_nbr,Nombre d'ordinateurs fixes,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,74,ordinateur_poste_fonctionnel_nbr,Nombre d'ordinateurs fixes fonctionnels,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,75,equipement_specifique,"Autres équipements spécifiques (Imprimantes, Matériel dédié...)",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,76,toilette,Y a-t-il des toilettes et/ou douches?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,77,toilette_separation,"Si oui, sont elles séparées entre hommes et femmes?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,78,toilette_raccordage,"Si oui, quel raccordage ?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,79,toilette_raccordage_non,"Si non raccordé, vers où sont redirigées les selles?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,80,toilette_fosse,"Si une fosse, est elle vidangeable?",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,81,toilette_type,Quels sont les types de sanitaires présents ?,string,True
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,82,wc_nbr,"Si WCs, combien ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,83,latrine_nbr,"Si latrines à eau, combien ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,84,latrine_seche_nbr,"Si latrines sèches, combien ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,85,pissotiere_nbr,"Si pissotières, combien ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,86,douche_nbr,"Si douches, combien ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,87,lampadaire,Y a-t-il des lampadaires dans l'établissement ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,88,lampadaire_nbr,"Si oui, combien ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,89,lampadaire_solaire_nbr,"Si oui, combien de lampadaires solaires ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,90,lampadaire_reseau_nbr,"Si oui, combien de lampadaires réseaux ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,91,lampadaire_art_nbr,"Si oui, combien de lampadaires artisanaux ?",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,92,rampe_handicape,Y a-t-il des rampes pour faciliter l'accès aux handicapés ?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,93,batiment_nbr,Nombre de bâtiments,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,94,vehicule_4_roue_nbr,Nombre de véhicules à 4 roues,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,95,vehicule_3_roue_nbr,Nombre de véhicules à 3 roues,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,96,vehicule_2_roue_nbr,Nombre de véhicules à 2 roues,int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,97,gab_nbr,"Si banque, nombre de GAB",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,98,gab_fct_nbr,"Si banque, nombre de GAB fonctionnels",int,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,99,cloture,L'établissement est il clôturé?,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,100,cloture_type,"Si oui, type de clôture",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,101,cloture_materiau,"Si oui, matériau de clôture",string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,102,pb,Problèmes rencontrés,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,103,solution_potentielle,Potentielles solutions,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,104,commentaire,Commentaires,string,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,105,date_collecte,Date de la collecte,date-time,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,106,date_mise_a_jour_collecte,Date de la mise à jour,date-time,False
+file-finance-etablissements-08-01-2025-17-49-30.csv,finance-etablissements.csv,107,geometry,Géométrie,Point,True

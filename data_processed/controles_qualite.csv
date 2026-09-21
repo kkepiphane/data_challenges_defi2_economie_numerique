@@ -1,0 +1,48 @@
+domaine,controle,resultat,detail
+Agents MM,Hiérarchie région → préfecture → commune sans conflit,OK,5 régions · 39 préfectures · 117 communes · 372 cantons
+Établissements,Hiérarchie région → préfecture → commune sans conflit,OK,5 régions · 38 préfectures · 95 communes · 130 cantons
+Population,"Indicateur, sexe, unité et année uniques",OK,Population résidente par découpage administratif et par sexe · sexe=Total · 2022
+Population,Aucune valeur manquante,OK,759 lignes
+Population,Hiérarchie reconstruite sans reste (somme des enfants = parent à chaque nœud),OK,759 nœuds
+Population,"Total national = 8 095 498 (RGPH-5, identique au livret INSEED du Défi 1)",OK,8 095 498
+Population,39 préfectures appariées aux noms de la base PRISE,OK,39/39
+Population,Rattachement préfecture → région identique RGPH-5 / PRISE,OK,Grand Lomé (DAGL) rattaché à Maritime comme dans la base PRISE
+Population,117 communes PRISE couvertes par 116 unités de population,OK,117 communes · 116 unités (Danyi 1 + Danyi 2 fusionnées)
+Population,Somme préfectorale = somme communale = total national,OK,8 095 498
+Population,Correction de libellé — Danyi 1 + Danyi 2,OK,unité fusionnée dans la source (« DANYI 1+DANYI 2 ») : population commune non séparable
+Population,Correction de libellé — Amou 3,OK,libellé source « AMOU 2 » en position 3 → Amou 3 (somme des cantons vérifiée)
+Population,Correction de libellé — Est-Mono 3,OK,libellé source « EST-MONO 1 » en position 3 → Est-Mono 3 (somme des cantons vérifiée)
+Agents MM,Aucune valeur manquante,OK,19788 lignes × 7 colonnes
+Agents MM,Identifiants FID uniques,OK,
+Agents MM,Aucune géométrie dupliquée,OK,
+Agents MM,"Valeurs d'opérateur reconnues (Moov, Togocom, Nsp)",OK,"Moov, Togocom : 12 649 · Togocom : 4 773 · Nsp : 1 348 · Moov : 1 018"
+Agents MM,Tous les agents rattachés à une unité de population communale,OK,19788/19788
+Établissements,Aucune valeur manquante,OK,738 lignes × 13 colonnes
+Établissements,Identifiants FID uniques,OK,
+Établissements,Aucune géométrie dupliquée,OK,
+Établissements,Catégories reconnues ; « Micro-Finace » fusionnée avec « Micro-Finance »,OK,Micro-Finance : 412 · Banque : 247 · Assurance : 69 · Mutuelle : 9 · Micro-Finace : 1
+Établissements,Statuts d'activité regroupés en 3 classes,OK,Utilisé : 658 · Néant : 50 · Autre : 6 · Fermé : 5 · En construction : 4 · Nsp : 3 · Location : 2 · Inacheve : 2 · Utilise : 2 · Abandonné : 2 · {autre} : 1 · En réfection : 1 · Sans Local : 1 · N/a : 1
+Établissements,Jours d'ouverture exploitables,OK,735/738 renseignés (casse harmonisée)
+Établissements,"Homonymes dans une même commune (signalés, conservés : coordonnées distinctes)",OK,2 enregistrements
+Établissements,Tous les établissements rattachés à une unité de population communale,OK,738/738
+Géométrie,"Contours préfectoraux (COD-AB OCHA, réconciliés au Défi 1) : 39 unités, noms PRISE",OK,prefectures.gpkg
+Géométrie,Agents MM : points situés dans un contour préfectoral,OK,19748/19788 (99.80%) ; les autres sont en limite de frontière
+Géométrie,Agents MM : préfecture géométrique = préfecture déclarée,OK,19431/19748 (98.39%) ; l'attribut déclaré fait foi pour les agrégations
+Géométrie,Établissements : points situés dans un contour préfectoral,OK,738/738 (100.00%) ; les autres sont en limite de frontière
+Géométrie,Établissements : préfecture géométrique = préfecture déclarée,OK,732/738 (99.19%) ; l'attribut déclaré fait foi pour les agrégations
+Géométrie,Superficie totale (projection équivalente LAEA),OK,57 242 km²
+Distances,Distance au plus proche établissement calculée (12 combinaisons catégorie × statut),OK,"BallTree haversine, rayon terrestre 6 371 km ; établissements hors Togo non couverts par les données"
+Internet (BM),Pays et indicateur uniques,OK,Togo · Individuals using the Internet (% of population)
+Internet (BM),Valeurs comprises entre 0 et 100 %,OK,dernière année renseignée : 2022 (37.6 %)
+Internet (BM),Années sans valeur (non imputées),OK,"1961, 1962, 1963, 1964, 1966, 1967, 1968, 1969, 1971, 1972, 1973, 1974, 2023"
+Télécoms,Tous les indicateurs sources documentés,OK,35 indicateurs
+Télécoms,Aucun doublon indicateur × année,OK,
+Télécoms,Aucune valeur manquante,OK,"230 observations, 2013–2019"
+Télécoms,Parts de marché Togocom + Moov = 100 %,OK,7 années
+Télécoms,Abonnés fixe + mobile = abonnés GSM + abonnés fixe,OK,7 années
+Télécoms,Internet mobile total = Togocom + Moov,OK,7 années
+Télécoms,Internet mobile haut débit = 3G + 4G des deux opérateurs,OK,"7 années ; 4G Moov absente de la source en 2018–2019 (égalité vérifiée sans elle, aucune valeur imputée)"
+Télécoms,Total Togocom = 2G + 3G + 4G,OK,7 années
+Télécoms,Total Moov = 2G + 3G (+ 4G si renseignée),OK,7 années
+Télécoms,ARPU cohérent avec l'unité déclarée (FCFA),ÉCART,ARPU 2019 = 2.56e+13 FCFA > CA 2019 = 1.85e+11 FCFA → série exclue des graphiques
+Télécoms,Unité des taux de pénétration Internet,ÉCART,"unité source « Nombre » alors que le libellé indique (%) : valeurs conservées, unité affichée %"

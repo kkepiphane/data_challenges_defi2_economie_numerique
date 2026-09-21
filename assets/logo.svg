@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="48" viewBox="0 0 232 48" role="img" aria-label="Inclusion numérique Togo">
+  <rect x="2" y="4" width="40" height="40" rx="11" fill="#1F7A4D"/>
+  <rect x="2" y="4" width="40" height="40" rx="11" fill="none" stroke="#E0A100" stroke-opacity=".55" stroke-width="1"/>
+  <path d="M13 31.5h18" stroke="#E0A100" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M13 25.5h18" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M22 11.2l1.85 3.75 4.14.6-3 2.92.71 4.12L22 20.65l-3.7 1.94.71-4.12-3-2.92 4.14-.6z" fill="#E0A100"/>
+  <text x="54" y="22" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="15.5" font-weight="700" fill="#FFFFFF" letter-spacing="-.2">Inclusion numérique</text>
+  <text x="54" y="39" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#B9CFC2" letter-spacing=".6">TOGO · MOBILE MONEY</text>
+</svg>

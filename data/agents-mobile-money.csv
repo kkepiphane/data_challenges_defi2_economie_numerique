@@ -1,0 +1,47 @@
+No.,Nom du champ,Question,Description,Type du champ
+1,region_nom_bdd,,xsd:string,string
+2,prefecture_nom_bdd,,xsd:string,string
+3,commune_nom_bdd,,xsd:string,string
+4,canton_nom_bdd,,xsd:string,string
+5,id,,xsd:int,int
+6,canton_id_bdd,ID du canton,xsd:string,string
+7,etab_id_collecte,ID textuel de l'établissement,xsd:string,string
+8,agent_id,,xsd:string,string
+9,agent_genre,,xsd:string,string
+10,agent_nom,,xsd:string,string
+11,agent_annee,,xsd:string,string
+12,agent_tel,,xsd:string,string
+13,metier,,xsd:string,string
+14,metier_spec,,xsd:string,string
+15,telephone_type,,xsd:string,string
+16,operateur,,xsd:string,string
+17,service,,xsd:string,string
+18,id_moov,,xsd:string,string
+19,date_moov,,xsd:string,string
+20,flooz,,xsd:string,string
+21,flooz_id,,xsd:string,string
+22,flooz_date,,xsd:string,string
+23,id_togocom,,xsd:string,string
+24,vente_point_num,,xsd:string,string
+25,date_togocom,,xsd:string,string
+26,tmoney,,xsd:string,string
+27,tmoney_id,,xsd:string,string
+28,tmoney_date,,xsd:string,string
+29,transfert_international,,xsd:string,string
+30,services_autre,,xsd:string,string
+31,lieu,,xsd:string,string
+32,batiment,,xsd:string,string
+33,agent_nbr,,xsd:int,int
+34,patron,,xsd:string,string
+35,patron_type,,xsd:string,string
+36,patron_entreprise,,xsd:string,string
+37,patron_personne,,xsd:string,string
+38,patron_genre,,xsd:string,string
+39,patron_tel,,xsd:string,string
+40,transfert_nbr,,xsd:int,int
+41,pb,,xsd:string,string
+42,solution,,xsd:string,string
+43,remarque,,xsd:string,string
+44,date_collecte,Date de la collecte,xsd:string,string
+45,date_mise_a_jour_collecte,Date de la mise à jour,xsd:string,string
+46,geometry,Géométrie,gml:Point,Point

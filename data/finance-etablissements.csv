@@ -1,0 +1,108 @@
+No.,Nom du champ,Question,Description,Type du champ
+1,region_nom_bdd,,xsd:string,string
+2,prefecture_nom_bdd,,xsd:string,string
+3,commune_nom_bdd,,xsd:string,string
+4,canton_nom_bdd,,xsd:string,string
+5,id,,xsd:int,int
+6,canton_id_bdd,ID du canton,xsd:string,string
+7,nom_localite,"Nom de la localité (Village, Ville ou Quartier si grande ville)",xsd:string,string
+8,etab_id_collecte,ID textuel de l'établissement,xsd:string,string
+9,etab_nom,Nom de l'établissement,xsd:string,string
+10,etab_adresse,Adresse de l'établissement,xsd:string,string
+11,etab_jour,Journées d'ouverture,xsd:string,string
+12,etab_heure,Horaires d'ouverture,xsd:string,string
+13,interlocuteur_presence,Y a-t-il un interlocuteur?,xsd:string,string
+14,interlocuteur_responsable,L'interlocuteur est il le responsable de l'établissement ?,xsd:string,string
+15,interlocuteur_fonction,"Si non, quelle est votre fonction ?",xsd:string,string
+16,interlocuteur_nom_prenom,"Si non, NOM Prénom",xsd:string,string
+17,interlocuteur_genre,"Si non, genre de l'interlocuteur",xsd:string,string
+18,interlocuteur_tel,"Si non, numéro de téléphone",xsd:string,string
+19,responsable_nom_prenom,NOM et Prénom du responsable,xsd:string,string
+20,responsable_genre,Genre du responsable,xsd:string,string
+21,responsable_fonction,Fonction du responsable,xsd:string,string
+22,responsable_tel,Téléphone du responsable,xsd:string,string
+23,responsable_mail,Mail du responsable,xsd:string,string
+24,responsable_annee,Année de la prise de fonction en tant que responsable,xsd:string,string
+25,activite_statut,Statut de l'établissement,xsd:string,string
+26,activite_categorie,Catégorie de l'établissement,xsd:string,string
+27,activite_categorie_banque,"Si banque, laquelle ?",xsd:string,string
+28,activite_description,Pourriez vous décrire en quelques lignes les activités de l'organisation?,xsd:string,string
+29,org_creation_date,Année de création de l'établissement,xsd:string,string
+30,org_nom,Nom de l'organisation de rattachement,xsd:string,string
+31,org_type,Type d'organisation,xsd:string,string
+32,org_type_autre,Autre type d'organisation,xsd:string,string
+33,org_ministere_tutelle,"Si établissement public, ministere/institiution de tutelle",xsd:string,string
+34,org_numero_prive,"Si établissement privé, Numéro CFE",xsd:string,string
+35,org_fodes,"Si Association/ONG/syndicat uniquement, dans le registre FODES?",xsd:string,string
+36,org_fodes_num,"Si oui, numéro FODES",xsd:string,string
+37,org_numero_autre,Tout autre numéro d'enregistrement,xsd:string,string
+38,org_type2,Origine de l'organisation de rattachement,xsd:string,string
+39,org_type2_international,"Si internationale, pays d'origine",xsd:string,string
+40,org_qg,Localité du quartier général de l'organisation au Togo,xsd:string,string
+41,personnel_nbr,Nombre total de personnels,xsd:int,int
+42,personnel_femme_nbr,Nombre de personnels femmes,xsd:int,int
+43,personnel_homme_nbr,Nombre de personnels hommes,xsd:int,int
+44,personnel_admin_nbr,Nombre de personnels administratifs,xsd:int,int
+45,personnel_comm_nbr,Nombre de personnels commercials,xsd:int,int
+46,reception,Y a-t-il une réception?,xsd:string,string
+47,guichet_nbr,Nombre de guichets pour accueillir les clients,xsd:int,int
+48,client_parti,Nombre de clients particuliers,xsd:int,int
+49,client_prive,Nombre de clients d'entreprises,xsd:int,int
+50,eau_acces,Y a-t-il accès à l'eau ?,xsd:string,string
+51,eau_source,"Si oui, quelle source ?",xsd:string,string
+52,eau_source_autre,Autre type de source d'eau,xsd:string,string
+53,eau_pression,"Si oui, quelle pression ?",xsd:string,string
+54,eau_debit,"Combien de secondes pour remplir une bouteille de 1,5L?",xsd:string,string
+55,eau_acces_temps,"Si oui, temps d'accès à l'eau ?",xsd:string,string
+56,eau_qualite,"Si oui, qualité de l'eau ?",xsd:string,string
+57,lavage,Y a-t-il des dispositifs pour le lavage des mains ?,xsd:string,string
+58,lavage_type,Type de dispositifs de lavage de mains,xsd:string,string
+59,lavage_type_autre,Autre type de lavage de mains,xsd:string,string
+60,elec_acces,Y a-t-il accès à l'électricité ?,xsd:string,string
+61,elec_source,"Si oui, quelle source d'électricité ?",xsd:string,string
+62,elec_qualite,"Si oui, qualité d'accès ?",xsd:string,string
+63,elec_acces_temps,"Si oui, temps d'accès à l'électricité",xsd:string,string
+64,internet,Y a-t-il un réseau internet dédié?,xsd:string,string
+65,internet_type,"Si oui, type d'accès dédié ?",xsd:string,string
+66,internet_type_autre,Autre type d'internet dédié,xsd:string,string
+67,internet_type_fournisseur,"Si oui, fourni par qui?",xsd:string,string
+68,couverture,Recevez vous internet ?,xsd:string,string
+69,couverture_type,"Si oui, quel type ?",xsd:string,string
+70,couverture_nom,"Si oui, quels réseaux disponibles ?",xsd:string,string
+71,ordinateur_portable_nbr,Nombre d'ordinateurs portables,xsd:int,int
+72,ordinateur_portable_fonctionnel_nbr,Nombre d'ordinateurs portables fonctionnels,xsd:int,int
+73,ordinateur_poste_nbr,Nombre d'ordinateurs fixes,xsd:int,int
+74,ordinateur_poste_fonctionnel_nbr,Nombre d'ordinateurs fixes fonctionnels,xsd:int,int
+75,equipement_specifique,"Autres équipements spécifiques (Imprimantes, Matériel dédié...)",xsd:string,string
+76,toilette,Y a-t-il des toilettes et/ou douches?,xsd:string,string
+77,toilette_separation,"Si oui, sont elles séparées entre hommes et femmes?",xsd:string,string
+78,toilette_raccordage,"Si oui, quel raccordage ?",xsd:string,string
+79,toilette_raccordage_non,"Si non raccordé, vers où sont redirigées les selles?",xsd:string,string
+80,toilette_fosse,"Si une fosse, est elle vidangeable?",xsd:string,string
+81,toilette_type,Quels sont les types de sanitaires présents ?,xsd:string,string
+82,wc_nbr,"Si WCs, combien ?",xsd:int,int
+83,latrine_nbr,"Si latrines à eau, combien ?",xsd:int,int
+84,latrine_seche_nbr,"Si latrines sèches, combien ?",xsd:int,int
+85,pissotiere_nbr,"Si pissotières, combien ?",xsd:int,int
+86,douche_nbr,"Si douches, combien ?",xsd:int,int
+87,lampadaire,Y a-t-il des lampadaires dans l'établissement ?,xsd:string,string
+88,lampadaire_nbr,"Si oui, combien ?",xsd:int,int
+89,lampadaire_solaire_nbr,"Si oui, combien de lampadaires solaires ?",xsd:int,int
+90,lampadaire_reseau_nbr,"Si oui, combien de lampadaires réseaux ?",xsd:int,int
+91,lampadaire_art_nbr,"Si oui, combien de lampadaires artisanaux ?",xsd:int,int
+92,rampe_handicape,Y a-t-il des rampes pour faciliter l'accès aux handicapés ?,xsd:string,string
+93,batiment_nbr,Nombre de bâtiments,xsd:int,int
+94,vehicule_4_roue_nbr,Nombre de véhicules à 4 roues,xsd:int,int
+95,vehicule_3_roue_nbr,Nombre de véhicules à 3 roues,xsd:int,int
+96,vehicule_2_roue_nbr,Nombre de véhicules à 2 roues,xsd:int,int
+97,gab_nbr,"Si banque, nombre de GAB",xsd:int,int
+98,gab_fct_nbr,"Si banque, nombre de GAB fonctionnels",xsd:int,int
+99,cloture,L'établissement est il clôturé?,xsd:string,string
+100,cloture_type,"Si oui, type de clôture",xsd:string,string
+101,cloture_materiau,"Si oui, matériau de clôture",xsd:string,string
+102,pb,Problèmes rencontrés,xsd:string,string
+103,solution_potentielle,Potentielles solutions,xsd:string,string
+104,commentaire,Commentaires,xsd:string,string
+105,date_collecte,Date de la collecte,xsd:date-time,date-time
+106,date_mise_a_jour_collecte,Date de la mise à jour,xsd:date-time,date-time
+107,geometry,Géométrie,gml:Point,Point

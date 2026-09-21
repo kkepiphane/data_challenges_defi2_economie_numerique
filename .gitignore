@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+.env
+
+# Streamlit : secrets locaux uniquement (config.toml est versionné)
+.streamlit/secrets.toml
+
+# Outils locaux
+.claude/
+.vscode/
+.idea/
+
+# Fichiers temporaires et verrous Office
+~$*
+*.tmp
+*.log
+
+# Systèmes
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,13 @@
+# --- Tableau de bord (suffisant pour `streamlit run app.py`) ---------------------------
+streamlit>=1.50
+pandas>=2.2
+numpy>=1.26
+plotly>=6.0
+
+# --- Chaîne de préparation et rapport (python -m src.pipeline / python -m src.rapport) -
+geopandas>=1.0
+shapely>=2.0
+pyogrio>=0.9
+scikit-learn>=1.4
+matplotlib>=3.8
+python-pptx>=1.0

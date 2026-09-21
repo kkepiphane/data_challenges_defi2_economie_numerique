@@ -1,0 +1,9 @@
+# Données sources et tables produites : conservées octet pour octet (aucune conversion de fin de ligne)
+data/** -text
+data_processed/** -text
+
+# Binaires
+*.pptx binary
+*.zip binary
+*.gpkg binary
+*.png binary
