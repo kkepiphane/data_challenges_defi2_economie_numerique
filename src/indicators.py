@@ -67,8 +67,8 @@ class Filtres:
     def libelle_geo(self) -> str:
         for niveau, vals in [("Commune", self.communes), ("Préfecture", self.prefectures), ("Région", self.regions)]:
             if vals:
-                return f"{niveau} : " + (", ".join(vals) if len(vals) <= 3 else f"{len(vals)} sélectionnées")
-        return "Togo — ensemble du territoire"
+                return ", ".join(vals) if len(vals) <= 3 else f"{len(vals)} {niveau.lower()}s"
+        return "Togo"
 
 
 # ======================================================================================

@@ -28,13 +28,12 @@ REGLES = {
     "C4": f"établissements > 0 et part des agents à plus de {C.SEUIL_ELOIGNEMENT_KM} km ≥ {SEUIL_PART_ELOIGNES} %",
 }
 PRIORITES = {3: "Priorité 1", 2: "Priorité 2", 1: "Priorité 3"}
-CONSTATS_COURTS = {"C1": "Aucun établissement", "C2": "Peu d'agents MM (> 2× la référence)",
-                   "C3": f"1er établissement > {SEUIL_DISTANCE_KM} km (médiane)",
-                   "C4": f"Agents dispersés (majorité > {C.SEUIL_ELOIGNEMENT_KM} km)"}
-ACTIONS_COURTES = {"C1": "Ouvrir ou conventionner un point de dépôt/crédit (IMF, mutuelle), ou adosser des agents MM à un établissement",
-                   "C2": "Densifier le réseau d'agents MM (recrutement ciblé des opérateurs)",
-                   "C3": "Services financiers numériques via les agents : compte, épargne, crédit mobiles (partenariat IMF–opérateurs)",
-                   "C4": "Points de service itinérants ou partenariats d'agence dans les zones dispersées"}
+CONSTATS_COURTS = {"C1": "Aucun établissement recensé", "C2": "Peu d'agents MM (plus de 2× la référence)",
+                   "C3": f"Premier établissement à plus de {SEUIL_DISTANCE_KM} km", "C4": "Agents dispersés loin des établissements"}
+ACTIONS_COURTES = {"C1": "Ouvrir ou conventionner un point de dépôt et de crédit",
+                   "C2": "Densifier le réseau d'agents mobile money",
+                   "C3": "Proposer des services financiers numériques via les agents",
+                   "C4": "Déployer des points de service itinérants"}
 SUIVI = {"C1": "établissements recensés", "C2": "habitants par agent", "C3": "distance médiane",
          "C4": f"part d'agents > {C.SEUIL_ELOIGNEMENT_KM} km"}
 

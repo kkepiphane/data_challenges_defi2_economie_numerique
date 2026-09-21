@@ -48,9 +48,9 @@ def courbe_internet(d: pd.DataFrame, comparaison: pd.DataFrame | None = None, ha
     fig = go.Figure()
     fig.add_trace(go.Scatter(
         x=d.annee, y=d.valeur_pct, mode="lines+markers", name="Individus utilisant Internet (BM/UIT)",
-        line=dict(color=T.GREEN_700, width=2.5, shape="linear"),
-        marker=dict(size=7, color=T.GREEN_700, line=dict(color=T.SURFACE, width=2)),
-        fill="tozeroy", fillcolor="rgba(31,122,77,0.08)",
+        line=dict(color=T.INK, width=2.25, shape="linear"),
+        marker=dict(size=6, color=T.INK, line=dict(color=T.SURFACE, width=1.5)),
+        fill="tozeroy", fillcolor="rgba(20,20,20,0.04)",
         customdata=np.c_[d.variation_pp.fillna(np.nan), d.phase],
         hovertemplate="<b>%{x}</b><br>Individus utilisant Internet : <b>%{y:.1f} %</b>"
                       "<br>Variation : %{customdata[0]:+.1f} pt<br>Phase : %{customdata[1]}"
@@ -111,13 +111,15 @@ def lignes(df: pd.DataFrame, x: str, y: str, groupe: str, couleurs: dict[str, st
                                font=dict(color=T.INK, size=11))
     _base(fig, hauteur, legende=df[groupe].nunique() > 1, marges=(8, 64, 40 if df[groupe].nunique() > 1 else 16, 8))
     fig.update_xaxes(dtick=1)
+    if pd.api.types.is_numeric_dtype(df[x]) and len(df):
+        fig.update_xaxes(range=[df[x].min() - 0.3, df[x].max() + 0.3])
     if unite == "%":
         fig.update_yaxes(ticksuffix=" %")
     fig.update_layout(hovermode="x unified" if df[groupe].nunique() > 1 else "closest")
     return fig
 
 
-def colonnes(x, y, couleur: str = T.GREEN_700, hauteur: int = 300, format_valeur=compact, nom: str = "",
+def colonnes(x, y, couleur: str = T.INK_2, hauteur: int = 300, format_valeur=compact, nom: str = "",
              unite_hover: str = "", source: str = "") -> go.Figure:
     x, y = list(x), list(y)
     fig = go.Figure(go.Bar(
@@ -154,7 +156,7 @@ def empile_technologies(df: pd.DataFrame, operateurs: list[str], hauteur: int = 
     return fig
 
 
-def multiples(df: pd.DataFrame, ordre: list[str], ncol: int = 4, hauteur: int = 380, couleur: str = T.GREEN_700) -> go.Figure:
+def multiples(df: pd.DataFrame, ordre: list[str], ncol: int = 4, hauteur: int = 380, couleur: str = T.INK) -> go.Figure:
     n = len(ordre)
     nrow = math.ceil(n / ncol)
     courts = [o.replace("Liaisons spécialisées Internet", "LS Internet").replace("Fibre optique (FTTH)", "Fibre (FTTH)") for o in ordre]
@@ -164,7 +166,7 @@ def multiples(df: pd.DataFrame, ordre: list[str], ncol: int = 4, hauteur: int = 
         g = df[df.libelle == lib].sort_values("annee")
         fig.add_trace(go.Scatter(x=g.annee, y=g.valeur, mode="lines+markers", line=dict(color=couleur, width=2),
                                  marker=dict(size=6, color=couleur, line=dict(color=T.SURFACE, width=1.5)),
-                                 fill="tozeroy", fillcolor="rgba(31,122,77,0.07)",
+                                 fill="tozeroy", fillcolor="rgba(20,20,20,0.04)",
                                  hovertemplate=f"<b>{lib}</b> · %{{x}}<br>%{{y:,.0f}}<extra></extra>", showlegend=False),
                       row=r, col=c)
         if len(g):
@@ -178,9 +180,9 @@ def multiples(df: pd.DataFrame, ordre: list[str], ncol: int = 4, hauteur: int = 
     return fig
 
 
-def sparkline(x, y, couleur: str = T.GREEN_700, hauteur: int = 90) -> go.Figure:
+def sparkline(x, y, couleur: str = T.INK, hauteur: int = 90) -> go.Figure:
     fig = go.Figure(go.Scatter(x=list(x), y=list(y), mode="lines", line=dict(color=couleur, width=2),
-                               fill="tozeroy", fillcolor="rgba(31,122,77,0.08)",
+                               fill="tozeroy", fillcolor="rgba(20,20,20,0.04)",
                                hovertemplate="%{x} : %{y:.1f} %<extra></extra>"))
     _base(fig, hauteur, legende=False, marges=(0, 0, 0, 0))
     fig.update_xaxes(visible=False)
@@ -192,7 +194,7 @@ def sparkline(x, y, couleur: str = T.GREEN_700, hauteur: int = 90) -> go.Figure:
 # Barres horizontales
 # ======================================================================================
 def barres_h(labels, valeurs, couleurs=None, hauteur: int | None = None, texte=None, hover: list[str] | None = None,
-             couleur: str = T.GREEN_700, titre_x: str = "", max_px: float = 20) -> go.Figure:
+             couleur: str = "#62625D", titre_x: str = "", max_px: float = 20) -> go.Figure:
     labels, valeurs = list(labels), list(valeurs)
     n = len(labels)
     hauteur = hauteur or max(160, 30 * n + 60)
@@ -201,9 +203,10 @@ def barres_h(labels, valeurs, couleurs=None, hauteur: int | None = None, texte=N
         marker_color=couleurs if couleurs is not None else couleur,
         text=texte, textposition="outside", cliponaxis=False, constraintext="none", textfont=dict(color=T.INK_2, size=11),
         hovertext=hover, hovertemplate="%{hovertext}<extra></extra>" if hover else "%{y} : %{x:,.1f}<extra></extra>"))
-    _base(fig, hauteur, legende=False, marges=(8, 56, 8, 8))
+    droite = 16 + 7 * max((len(str(t)) for t in texte), default=4) if texte is not None else 56
+    _base(fig, hauteur, legende=False, marges=(8, droite, 8, 8))
     fig.update_layout(bargap=_bargap(n, hauteur - 20, max_px))
-    fig.update_yaxes(autorange="reversed", showgrid=False, tickfont=dict(color=T.INK_2, size=12))
+    fig.update_yaxes(autorange="reversed", showgrid=False, tickfont=dict(color=T.INK_2, size=12), automargin=True, ticksuffix="  ")
     fig.update_xaxes(showgrid=True, gridcolor=T.GRID, showticklabels=False, title_text=titre_x, rangemode="tozero")
     return fig
 
@@ -294,7 +297,7 @@ def couche_points(fig: go.Figure, df: pd.DataFrame, nom: str, couleur: str, tail
 def couche_densite(fig: go.Figure, df: pd.DataFrame, rayon: int = 9) -> None:
     fig.add_trace(go.Densitymap(
         lat=df.lat, lon=df.lon, radius=rayon, name="Densité d'agents MM", showscale=False,
-        colorscale=[[0, "rgba(224,161,0,0)"], [0.25, "rgba(224,161,0,0.45)"], [0.6, "rgba(192,90,43,0.75)"], [1, "rgba(110,46,18,0.9)"]],
+        colorscale=[[0, "rgba(20,20,20,0)"], [0.25, "rgba(20,20,20,0.25)"], [0.6, "rgba(20,20,20,0.55)"], [1, "rgba(20,20,20,0.85)"]],
         hoverinfo="skip"))
 
 
@@ -304,7 +307,7 @@ def couche_densite(fig: go.Figure, df: pd.DataFrame, rayon: int = 9) -> None:
 def matrice(rangs: pd.DataFrame, textes: pd.DataFrame, hover: pd.DataFrame, hauteur: int | None = None) -> go.Figure:
     n = len(rangs)
     hauteur = hauteur or max(260, 26 * n + 90)
-    echelle = ["#FBF1EA", "#F6DCCB", "#EEBC9E", "#E29A72", "#D3784C"]
+    echelle = ["#F7F7F5", "#E7E7E3", "#D3D3CE", "#BCBCB6", "#A3A39C"]
     fig = go.Figure(go.Heatmap(
         z=rangs.values, x=list(rangs.columns), y=list(rangs.index), zmin=0, zmax=1,
         colorscale=[[i / 4, c] for i, c in enumerate(echelle)], xgap=2, ygap=2,

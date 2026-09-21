@@ -26,6 +26,10 @@ SCENARIOS = {
     "periode_un_an": {"f_periode": (2019, 2019)},
     "periode_hors_telecom": {"f_periode": (2020, 2023)},
     "moov_seul_commune": {"f_operateurs": ["Moov"], "f_op_nr": False, "f_prefectures": ["Golfe"], "f_communes": ["Golfe 1"]},
+    "niveau_region": {"niv_inclusion": "Région", "niv_reco": "Préfecture", "niv_repartition": "Région"},
+    "niveau_commune": {"niv_inclusion": "Commune", "critere_inclusion": "hab_par_etab", "niv_repartition": "Canton"},
+    "region_critere_distance": {"f_regions": ["Kara"], "niv_inclusion": "Région", "critere_inclusion": "dist_mediane_km"},
+    "vues_carte": {"vue_carte": "Opérateurs", "couches_carte": ["Agents MM", "Établissements", "Population"]},
 }
 
 

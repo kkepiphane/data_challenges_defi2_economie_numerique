@@ -1,6 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="252" height="88" viewBox="0 0 252 88" role="img" aria-label="République togolaise — Inclusion numérique et financière">
-  <svg x="0" y="0" width="61.1" height="88" viewBox="0 0 750 1080">
-  
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="750"
+   height="1080"
+   viewBox="0 0 750 1080"
+   version="1.1"
+   id="svg125"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata129">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
   <defs
      id="defs6" />
   <path
@@ -274,8 +294,4 @@
      d="m 561.75332,227.7256 -12.64621,-11.77198 23.1297,-24.84738 11.68199,10.87441 -3.24506,3.48605 -8.12176,-7.56031 -5.83421,6.26748 5.1549,4.79855 -3.17601,3.41188 -5.15491,-4.79855 -7.62936,8.19593 9.08599,8.45788 z"
      id="path4232"
      style="font-size:50.6667px;font-family:'Highway Gothic Narrow';-inkscape-font-specification:'Highway Gothic Narrow';stroke-width:3.5" />
-</svg>
-  <text x="73.1" y="30" font-family="'Public Sans','Segoe UI',Helvetica,Arial,sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.1" fill="#6B6B66">RÉPUBLIQUE TOGOLAISE</text>
-  <text x="73.1" y="53" font-family="'Public Sans','Segoe UI',Helvetica,Arial,sans-serif" font-size="16.5" font-weight="700" fill="#141414">Inclusion numérique</text>
-  <text x="73.1" y="73" font-family="'Public Sans','Segoe UI',Helvetica,Arial,sans-serif" font-size="16.5" font-weight="700" fill="#141414">et financière</text>
 </svg>

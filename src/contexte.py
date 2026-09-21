@@ -73,20 +73,17 @@ def contexte() -> Contexte:
 
 def puces_filtres(f: I.Filtres, periode: bool | str = False, geo: bool = False, operateur: bool = False,
                   etablissements: bool = False, note_na: str = "") -> list[tuple[str, str, bool]]:
-    """Puces indiquant, pour la page courante, les filtres appliqués et ceux sans objet.
-    periode : True = appliquée ; texte = motif pour lequel elle est sans objet."""
+    """Filtres à rappeler sous le titre : uniquement ceux qui s'appliquent à la page et diffèrent des valeurs par défaut."""
+    d = I.Filtres()
     p = []
-    if periode is True:
+    if periode is True and tuple(f.periode) != tuple(d.periode):
         p.append(("Période", f"{f.periode[0]}–{f.periode[1]}", True))
-    else:
-        p.append(("Période", periode or "sans objet", False))
-    p.append(("Territoire", f.libelle_geo(), True) if geo else ("Territoire", note_na or "série nationale", False))
-    ops = " + ".join(f.operateurs) or "aucun"
-    if operateur:
-        p.append(("Opérateurs", ops + (" + non renseigné" if f.inclure_op_nr else ""), True))
-    if etablissements:
-        cats = ", ".join(f.categories) if f.categories else "aucune"
-        p.append(("Établissements", cats, True))
-        if tuple(f.statuts) != tuple(C.STATUT_DEFAULT):
-            p.append(("Statuts", ", ".join(f.statuts) or "aucun", True))
+    if geo and f.geo_actif:
+        p.append(("Territoire", f.libelle_geo(), True))
+    if operateur and (tuple(f.operateurs) != tuple(d.operateurs) or f.inclure_op_nr != d.inclure_op_nr):
+        p.append(("Opérateurs", ", ".join(f.operateurs) or "aucun", True))
+    if etablissements and tuple(f.categories) != tuple(d.categories):
+        p.append(("Établissements", ", ".join(c.lower() for c in f.categories) or "aucun", True))
+    if etablissements and tuple(f.statuts) != tuple(d.statuts):
+        p.append(("Statuts", ", ".join(s.lower() for s in f.statuts) or "aucun", True))
     return p

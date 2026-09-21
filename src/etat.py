@@ -48,15 +48,14 @@ def barre_laterale(pop_commune: pd.DataFrame) -> None:
     initialiser()
     geo = pop_commune.assign(communes=pop_commune.communes_bdd.str.split("|")).explode("communes")
     with st.sidebar:
-        st.markdown("##### Filtres globaux")
-        st.slider("Période des séries temporelles", C.ANNEE_MIN, C.ANNEE_MAX, key="f_periode",
-                  help="S'applique aux séries Internet (1990–2022) et télécoms (2013–2019). "
-                       "Les points de service n'ont pas de date de collecte individuelle.")
-        st.multiselect("Région", C.REGIONS, key="f_regions", placeholder="Toutes les régions")
+        st.markdown("##### Filtres")
+        st.slider("Période", C.ANNEE_MIN, C.ANNEE_MAX, key="f_periode",
+                  help="Séries Internet (1990–2022) et télécoms (2013–2019). Sans effet sur les points de service, non datés.")
+        st.multiselect("Région", C.REGIONS, key="f_regions", placeholder="Toutes")
         prefs = sorted(geo[geo.region.isin(st.session_state.f_regions)].prefecture.unique()
                        if st.session_state.f_regions else geo.prefecture.unique())
         _nettoyer("f_prefectures", prefs)
-        st.multiselect("Préfecture", prefs, key="f_prefectures", placeholder="Toutes les préfectures")
+        st.multiselect("Préfecture", prefs, key="f_prefectures", placeholder="Toutes")
         g = geo
         if st.session_state.f_prefectures:
             g = g[g.prefecture.isin(st.session_state.f_prefectures)]
@@ -64,22 +63,19 @@ def barre_laterale(pop_commune: pd.DataFrame) -> None:
             g = g[g.region.isin(st.session_state.f_regions)]
         communes = sorted(g.communes.unique(), key=lambda s: (s.rsplit(" ", 1)[0], int(s.rsplit(" ", 1)[1])))
         _nettoyer("f_communes", communes)
-        st.multiselect("Commune", communes, key="f_communes", placeholder="Toutes les communes")
-        st.pills("Opérateurs mobile money", C.OPERATEURS, selection_mode="multi", key="f_operateurs",
-                 help="Un agent est retenu s'il sert au moins un opérateur sélectionné. S'applique aussi aux séries par opérateur.")
-        st.checkbox("Inclure les agents à opérateur non renseigné", key="f_op_nr",
+        st.multiselect("Commune", communes, key="f_communes", placeholder="Toutes")
+        st.pills("Opérateurs", C.OPERATEURS, selection_mode="multi", key="f_operateurs",
+                 help="Un agent est retenu s'il sert au moins un opérateur sélectionné.")
+        st.checkbox("Inclure l'opérateur non renseigné", key="f_op_nr",
                     help="1 348 agents (6,8 %) portent la mention « Nsp » dans la source.")
-        st.multiselect("Catégories d'établissements financiers", C.FIN_CATEGORIES, key="f_categories",
-                       placeholder="Aucune catégorie",
-                       help="Par défaut : établissements de dépôt et de crédit (banques, micro-finance, mutuelles). "
-                            "Les assurances sont activables.")
-        st.multiselect("Statut déclaré des établissements", C.STATUT_GROUPES, key="f_statuts", placeholder="Aucun statut",
+        st.multiselect("Établissements", C.FIN_CATEGORIES, key="f_categories", placeholder="Aucune catégorie",
+                       help="Par défaut : dépôt et crédit (banques, micro-finance, mutuelles).")
+        st.multiselect("Statut des établissements", C.STATUT_GROUPES, key="f_statuts", placeholder="Aucun statut",
                        help="« Déclaré non opérationnel » : fermé, en construction, inachevé, abandonné, en réfection, sans local.")
         n = nb_filtres_actifs()
-        st.button(f"Réinitialiser les filtres{f' ({n})' if n else ''}", on_click=reinitialiser,
+        st.button(f"Réinitialiser{f' ({n})' if n else ''}", on_click=reinitialiser,
                   icon=":material/restart_alt:", width="stretch", disabled=n == 0, key="btn_reset")
-        st.html('<div class="brand-foot">Sources : RGPH-5 2022 · Géoportail PRISE · Banque mondiale · '
-                'séries télécoms 2013–2019. Aucune valeur imputée.</div>')
+        st.html('<div class="sidebar-note">RGPH-5 2022, géoportail PRISE, Banque mondiale, séries télécoms 2013–2019.</div>')
 
 
 def filtres_courants() -> Filtres:

@@ -10,27 +10,19 @@ T = ctx.T
 ctrl = T["controles"]
 
 ui.entete(
-    "Référence",
-    "Méthodologie, sources et qualité des données",
-    f"Chaque chiffre du tableau de bord se retrace jusqu'à un fichier de <code>data/</code> et une formule. "
-    f"{len(ctrl)} contrôles automatiques sont rejoués à chaque exécution du pipeline ({(ctrl.resultat == 'OK').sum()} conformes, "
-    f"{(ctrl.resultat != 'OK').sum()} écarts documentés).",
+    "Méthodologie",
+    f"Sources, formules et contrôles. {len(ctrl)} contrôles automatiques : {(ctrl.resultat == 'OK').sum()} conformes, "
+    f"{(ctrl.resultat != 'OK').sum()} écarts documentés.",
 )
 
-onglets = st.tabs(["Sources", "Définitions & formules", "Jointures", "Contrôles", "Journal de qualité",
-                   "Dictionnaire de données", "Champs absents", "Analyses impossibles"])
+onglets = st.tabs(["Sources", "Formules", "Jointures", "Contrôles", "Qualité", "Dictionnaire", "Champs absents", "Limites"])
 
 with onglets[0]:
     src = pd.DataFrame([{"Fichier": k, "Contenu": v["titre"], "Producteur": v["producteur"], "Période": v["periode"],
                          "Granularité": v["granularite"]} for k, v in C.SOURCES.items()])
     st.dataframe(src, hide_index=True, width="stretch")
-    ui.encadre("<b>Donnée issue du Défi 1</b> (seule donnée externe à <code>data/</code>, faute de géométrie surfacique dans les "
-               "fichiers fournis) : contours préfectoraux COD-AB OCHA (valides au 07/01/2021), déjà réconciliés avec les noms PRISE "
-               "(<code>defi1/data/processed/prefectures.gpkg</code>). Ils servent uniquement à cartographier et à contrôler la "
-               "cohérence spatiale ; les agrégations utilisent les rattachements déclarés dans les sources. La période de collecte "
-               "des agents (PRISE 2021/2022) provient de l'audit du catalogue du géoportail réalisé au Défi 1 "
-               "(<code>defi1/reports/audit_sources.md</code>) ; les 19 788 agents fournis ici y sont identiques, enregistrement par enregistrement.",
-               "", "database")
+    ui.source("<b>Données du Défi 1</b> : contours préfectoraux COD-AB OCHA (seule géométrie disponible) et période de collecte "
+              "des agents (PRISE 2021/22), dont les 19 788 enregistrements sont identiques à ceux fournis ici.")
 
 with onglets[1]:
     defs = pd.DataFrame([{"Indicateur": I.LIBELLES.get(k, k), "Formule / définition": v} for k, v in I.FORMULES.items()])
