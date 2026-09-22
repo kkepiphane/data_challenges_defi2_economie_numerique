@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from src import charts, config as C, indicators as I, recommandations as R, theme as T, ui
+from src.etat import valeur_page
 from src.contexte import contexte, puces_filtres
 from src.formatage import entier, km, pct
 
@@ -11,6 +12,8 @@ ctx = contexte()
 f = ctx.f
 nat = I.synthese_nationale(ctx.agents, ctx.finance, int(ctx.T["pop_commune"].population.sum()))
 
+valeur_page("niv_reco", "Commune")
+valeur_page("prio_sel", ["Priorité 1", "Priorité 2", "Priorité 3"])
 niveau_lib = st.session_state.get("niv_reco") or "Commune"
 niveau = {"Commune": "commune", "Préfecture": "prefecture"}[niveau_lib]
 reco = R.generer(ctx.territoire(niveau), niveau, nat["hab_par_agent"])
@@ -25,10 +28,10 @@ ui.entete(
 
 c1, c2, c3 = st.columns([1, 1.6, 1], gap="medium", vertical_alignment="bottom")
 with c1:
-    st.segmented_control("Niveau", ["Commune", "Préfecture"], default="Commune", key="niv_reco")
+    st.segmented_control("Niveau", ["Commune", "Préfecture"], key="niv_reco")
 with c2:
     prio_sel = st.pills("Priorités", list(R.PRIORITES.values()), selection_mode="multi",
-                        default=list(R.PRIORITES.values()), key="prio_sel")
+                        key="prio_sel")
 with c3:
     with st.popover("Critères", icon=":material/rule:", width="stretch"):
         st.dataframe(pd.DataFrame([{"Critère": k, "Libellé": R.CRITERES[k], "Règle": R.REGLES[k]} for k in R.CRITERES]),
@@ -81,7 +84,7 @@ if niveau == "commune" and not r.empty:
         agg = agg.reindex(columns=[p for p in ["Priorité 1", "Priorité 2", "Priorité 3"] if p in agg.columns])
         agg = agg.assign(_t=agg.sum(axis=1)).sort_values("_t", ascending=False).drop(columns="_t").head(15)
         fig = go.Figure()
-        coul = {"Priorité 1": T.CRITIQUE, "Priorité 2": "#8A8A84", "Priorité 3": "#CFCFC9"}
+        coul = {"Priorité 1": T.CRITIQUE, "Priorité 2": "#7A8783", "Priorité 3": "#C3D3CB"}
         for p in agg.columns:
             fig.add_trace(go.Bar(y=agg.index, x=agg[p], name=p, orientation="h", marker_color=coul[p],
                                  marker_line=dict(color="#fff", width=2),

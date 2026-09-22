@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 
 from src import charts, config as C, indicators as I, theme as T, ui
+from src.etat import valeur_page
 from src.contexte import contexte, geo, puces_filtres
 from src.formatage import entier, nombre, pct
 
@@ -40,11 +41,12 @@ st.write("")
 with ui.carte("carte_points"):
     h1, h2 = st.columns([1.3, 1], gap="medium", vertical_alignment="bottom")
     with h1:
-        vue = st.segmented_control("Affichage", ["Réseau financier", "Opérateurs", "Densité"],
-                                   default="Réseau financier", key="vue_carte")
+        valeur_page("vue_carte", "Réseau financier")
+        vue = st.segmented_control("Affichage", ["Réseau financier", "Opérateurs", "Densité"], key="vue_carte")
     with h2:
+        valeur_page("couches_carte", ["Agents MM", "Établissements"])
         couches = st.pills("Couches", ["Agents MM", "Établissements", "Population"], selection_mode="multi",
-                           default=["Agents MM", "Établissements"], key="couches_carte")
+                           key="couches_carte")
     vue = vue or "Réseau financier"
     couches = couches or []
     gj = geo("prefectures")
@@ -75,7 +77,7 @@ with ui.carte("carte_points"):
                     charts.couche_points(fig, sub, f"{cl} ({entier(len(sub))})", T.OPERATEURS[cl], 5, 0.75,
                                          [h for h, m in zip(hov, ag.classe_operateur == cl) if m])
         else:
-            charts.couche_points(fig, ag, f"Agents MM ({entier(len(ag))})", "#8A8A84", 4, 0.35, hov)
+            charts.couche_points(fig, ag, f"Agents MM ({entier(len(ag))})", "#7A8783", 4, 0.35, hov)
     if "Établissements" in couches and not fi.empty and vue == "Densité":
         rien = False
         charts.couche_points(fig, fi, f"Établissements ({entier(len(fi))})", T.INK, 6, 0.85,
@@ -127,14 +129,15 @@ with c3:
         else:
             d = (jr.assign(samedi=np.where(jr.ouvert_samedi, "Ouvert", "Fermé"))
                    .groupby(["categorie", "samedi"]).size().rename("n").reset_index())
-            ui.graphique(charts.barres_100(d, "categorie", "samedi", "n", {"Ouvert": T.INK_2, "Fermé": "#DADAD5"},
+            ui.graphique(charts.barres_100(d, "categorie", "samedi", "n", {"Ouvert": T.INK_2, "Fermé": "#D6E1DC"},
                                            ["Ouvert", "Fermé"], hauteur=240), "bar_jours")
 
 # --------------------------------------------------------------------------------------
 st.write("")
 with ui.carte("repartition"):
     ui.titre_carte("Répartition territoriale", aide="Comptages bruts. Les ratios par habitant figurent dans « Inclusion territoriale ».")
-    niv = st.segmented_control("Niveau", ["Région", "Préfecture", "Commune", "Canton"], default="Préfecture",
+    valeur_page("niv_repartition", "Préfecture")
+    niv = st.segmented_control("Niveau", ["Région", "Préfecture", "Commune", "Canton"],
                                key="niv_repartition", label_visibility="collapsed")
     niv = niv or "Préfecture"
     col = {"Région": "region", "Préfecture": "prefecture", "Commune": "commune", "Canton": "canton"}[niv]
@@ -149,7 +152,7 @@ with ui.carte("repartition"):
         rep = rep.rename(columns={"region": "Région", "prefecture": "Préfecture", "commune": "Commune", "canton": "Canton"})
         rep = rep.sort_values("Agents MM", ascending=False)
         st.dataframe(rep, hide_index=True, width="stretch", height=360,
-                     column_config={"Agents MM": st.column_config.ProgressColumn(color="#A3A39D", format="%d", min_value=0, max_value=int(rep["Agents MM"].max() or 1))})
+                     column_config={"Agents MM": st.column_config.ProgressColumn(color="#23836A", format="%d", min_value=0, max_value=int(rep["Agents MM"].max() or 1))})
         if niv == "Canton":
             ui.source("Seuls les cantons contenant au moins un point apparaissent.")
         ui.telecharger(rep, f"repartition_{col}")
@@ -164,6 +167,7 @@ with t1:
         "nom": "Nom", "categorie": "Catégorie", "statut_source": "Statut (source)", "statut_groupe": "Statut (regroupé)",
         "region": "Région", "prefecture": "Préfecture", "commune": "Commune", "canton": "Canton", "localite": "Localité",
         "jours_ouverture": "Jours d'ouverture", "lat": "Latitude", "lon": "Longitude"})
+    valeur_page("recherche_etab", "")
     recherche = st.text_input("Rechercher", placeholder="Nom, localité ou commune", key="recherche_etab")
     if recherche:
         m = tf[["Nom", "Localité", "Commune"]].apply(lambda s: s.str.contains(recherche, case=False, na=False)).any(axis=1)

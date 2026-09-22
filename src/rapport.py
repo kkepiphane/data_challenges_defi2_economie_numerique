@@ -1,4 +1,4 @@
-"""Rapport PowerPoint (10 diapositives) — python-pptx.
+﻿"""Rapport PowerPoint (10 diapositives) — python-pptx.
 
 Usage : python -m src.rapport
 Tous les chiffres et graphiques sont recalculés depuis data_processed/ avec les filtres par défaut
@@ -40,8 +40,9 @@ def rgb(h: str) -> RGBColor:
 
 
 INK, INK2, MUTED = rgb(TH.INK), rgb(TH.INK_2), rgb(TH.MUTED)
-VERT, VERT_F, OR, INDIGO, ROUGE = rgb(TH.GREEN_700), rgb(TH.GREEN_900), rgb(TH.GOLD), rgb(TH.INDIGO), rgb(TH.CRITIQUE)
-BLANC, TEINTE, LIGNE = rgb("#FFFFFF"), rgb("#F2F5F3"), rgb(TH.LINE)
+VERT, VERT_F, OR, INDIGO, ROUGE = rgb(TH.GREEN_700), rgb(TH.VERT_FONCE), rgb(TH.GOLD), rgb(TH.INDIGO), rgb(TH.CRITIQUE)
+BLANC, TEINTE, LIGNE = rgb("#FFFFFF"), rgb(TH.MENTHE), rgb(TH.LINE)
+ARMOIRIES = C.ASSETS_DIR / "armoiries.png"
 
 
 # ======================================================================================
@@ -105,6 +106,15 @@ def pastille(slide, x, y, d, fond, libelle, couleur=BLANC, taille=12):
     r.text = _t(libelle)
     r.font.name, r.font.size, r.font.bold, r.font.color.rgb = POLICE, Pt(taille), True, couleur
     return s
+
+
+def bandeau(slide):
+    """Filet vert en tête de diapositive (couverture et conclusion)."""
+    r = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(W), Inches(0.14))
+    r.fill.solid()
+    r.fill.fore_color.rgb = VERT_F
+    r.line.fill.background()
+    r.shadow.inherit = False
 
 
 def fond(slide, couleur):
@@ -313,22 +323,24 @@ def construire() -> Path:
 
     # ---------------------------------------------------------------- 1. Titre et objectif
     sl = prs.slides.add_slide(vierge)
-    fond(sl, VERT_F)
-    texte(sl, 0.8, 0.8, 8, 0.4, "DÉFI 2 · ÉCONOMIE NUMÉRIQUE", taille=12, gras=True, couleur=OR)
-    texte(sl, 0.8, 1.35, 11.5, 1.9, "Adoption du numérique et inclusion financière par le mobile money au Togo",
-          taille=40, gras=True, couleur=BLANC, interligne=1.0)
-    texte(sl, 0.8, 3.25, 10.5, 0.9, "Objectif : mesurer, à partir des seules données disponibles, où le réseau d'agents mobile money "
-          "supplée l'absence d'offre financière formelle — et où agir en priorité.", taille=16, couleur=rgb("#CFE0D6"))
+    bandeau(sl)
+    image(sl, ARMOIRIES, 0.8, 0.55, h=1.45)
+    texte(sl, 1.95, 0.95, 8, 0.35, "DÉFI 2 · ÉCONOMIE NUMÉRIQUE", taille=12, gras=True, couleur=VERT_F)
+    texte(sl, 1.95, 1.3, 8, 0.35, "Rapport d'analyse et tableau de bord interactif", taille=12, couleur=INK2)
+    texte(sl, 0.8, 2.3, 11.5, 1.5, "Adoption du numérique et inclusion financière par le mobile money au Togo",
+          taille=38, gras=True, couleur=INK, interligne=1.0)
+    texte(sl, 0.8, 3.8, 10.5, 0.9, "Objectif : mesurer, à partir des seules données disponibles, où le réseau d'agents mobile money "
+          "supplée l'absence d'offre financière formelle — et où agir en priorité.", taille=16, couleur=INK2)
     for i, (v, l, c) in enumerate([
-        (f"{nombre(s[2022])} %", "de la population utilise Internet (2022)", OR),
-        (entier(nat["agents"]), "agents mobile money géolocalisés (2021/22)", BLANC),
-        (f"{len(mm)} communes", f"sans établissement de dépôt/crédit recensé ({entier(mm.population.sum())} hab.)", rgb("#F2A7A0")),
+        (f"{nombre(s[2022])} %", "de la population utilise Internet (2022)", VERT_F),
+        (entier(nat["agents"]), "agents mobile money géolocalisés (2021/22)", VERT_F),
+        (f"{len(mm)} communes", f"sans établissement de dépôt/crédit recensé ({entier(mm.population.sum())} hab.)", ROUGE),
     ]):
         x = 0.8 + i * 4.05
-        boite(sl, x, 4.55, 3.8, 1.75, fond=rgb("#123D2C"), rayon=0.06)
-        chiffre(sl, x + 0.3, 4.75, 3.3, v, l, couleur=c, taille=30, couleur_lib=rgb("#CFE0D6"))
+        boite(sl, x, 4.9, 3.8, 1.65, fond=TEINTE, rayon=0.06, ligne=LIGNE)
+        chiffre(sl, x + 0.3, 5.08, 3.3, v, l, couleur=c, taille=30)
     pied(sl, "RGPH-5 2022 (INSEED) · Géoportail PRISE · Banque mondiale (WDI/UIT) · séries sectorielles télécoms 2013–2019. "
-             "Aucune valeur imputée.", 1, sombre=True)
+             "Aucune valeur imputée.", 1)
     notes(sl, "Les trois chiffres sont recalculés par src/rapport.py depuis data_processed/ : WDI 2022 ; nombre de lignes du fichier "
               "agents ; communes (unités RGPH-5) avec agents > 0 et établissements (banque, micro-finance, mutuelle ; statuts en activité "
               "ou non renseigné) = 0.")
@@ -351,10 +363,10 @@ def construire() -> Path:
         boite(sl, x, 2.35, 3.85, 3.35, fond=TEINTE)
         pastille(sl, x + 0.3, 2.6, 0.5, coul, n, taille=14)
         texte(sl, x + 0.95, 2.66, 2.7, 0.4, titre, taille=15, gras=True)
-        texte(sl, x + 0.3, 3.35, 3.3, 0.8, val, taille=40, gras=True, couleur=coul if coul != OR else rgb("#8A6400"))
+        texte(sl, x + 0.3, 3.35, 3.3, 0.8, val, taille=40, gras=True, couleur=coul if coul != OR else rgb("#8A5A0E"))
         texte(sl, x + 0.3, 4.25, 3.3, 1.35, desc, taille=13, couleur=INK2)
     boite(sl, 0.6, 5.95, 12.1, 0.8, fond=rgb("#FBE9E7"))
-    texte(sl, 0.9, 6.07, 11.6, 0.6, [[("Enjeu : ", {"gras": True, "couleur": rgb("#A12A2A")}),
+    texte(sl, 0.9, 6.07, 11.6, 0.6, [[("Enjeu : ", {"gras": True, "couleur": ROUGE}),
                                       (f"{nombre(nat['agents_par_etab'], 0)} agents MM pour un établissement financier. Là où aucun établissement "
                                        "n'est recensé, l'agent MM est le seul point d'accès physique à un service financier.", {})]],
           taille=14, ancre=MSO_ANCHOR.MIDDLE)
@@ -407,7 +419,7 @@ def construire() -> Path:
     etiquette_point(ch.plots[0].series[0], len(d) - 1, f"{nombre(s[2022])} %", position=XL_LABEL_POSITION.LEFT)
     pic = K["pic"]
     chiffre(sl, 9.3, 2.3, 3.5, f"×{nombre(K['apres'] / K['avant'])}", "gain annuel moyen 2017–2022 rapporté à 2013–2017", couleur=VERT)
-    chiffre(sl, 9.3, 3.75, 3.5, pp(pic.variation_pp), f"plus forte hausse annuelle ({int(pic.annee)})", couleur=rgb("#8A6400"))
+    chiffre(sl, 9.3, 3.75, 3.5, pp(pic.variation_pp), f"plus forte hausse annuelle ({int(pic.annee)})", couleur=rgb("#8A5A0E"))
     pen = S("Taux de pénétration Internet (Toutes technologies) (%)")
     chiffre(sl, 9.3, 5.2, 3.5, f"{nombre(pen[2019])} %", f"pénétration par abonnements en 2019, contre {nombre(s[2019])} % d'individus : "
             "multi-abonnements, mesures non substituables", couleur=INDIGO, taille_lib=11)
@@ -574,10 +586,8 @@ def construire() -> Path:
 
     # ---------------------------------------------------------------- 10. Limites et conclusion
     sl = prs.slides.add_slide(vierge)
-    fond(sl, VERT_F)
-    texte(sl, 0.8, 0.55, 9, 0.35, "10  ·  LIMITES DES DONNÉES ET CONCLUSION", taille=11, gras=True, couleur=OR)
-    texte(sl, 0.8, 0.9, 11.8, 0.8, "Le mobile money maille le pays ; l'offre formelle doit s'y adosser",
-          taille=28, gras=True, couleur=BLANC)
+    bandeau(sl)
+    entete(sl, 10, "Limites des données et conclusion", "Le mobile money maille le pays ; l'offre formelle doit s'y adosser")
     p1c = K["reco_c"][K["reco_c"].priorite == "Priorité 1"]
     concl = [("1", f"L'usage d'Internet progresse vite ({nombre(s[2013])} % → {nombre(s[2022])} %), sur un marché mobile en duopole équilibré."),
              ("2", f"Le réseau d'agents MM ({entier(nat['agents'])}) est {nombre(nat['agents_par_etab'], 0)} fois plus dense que celui des "
@@ -586,21 +596,22 @@ def construire() -> Path:
                  f"{r} ({n})" for r, n in p1c.region.value_counts().items()) + ".")]
     for i, (n, t) in enumerate(concl):
         y = 2.0 + i * 0.95
-        pastille(sl, 0.8, y, 0.48, OR, n, couleur=VERT_F, taille=13)
-        texte(sl, 1.5, y + 0.02, 5.4, 0.9, t, taille=14, couleur=BLANC)
-    boite(sl, 7.3, 1.95, 5.4, 4.7, fond=rgb("#123D2C"), rayon=0.05)
-    texte(sl, 7.6, 2.15, 4.9, 0.4, "Limites — données non disponibles", taille=15, gras=True, couleur=OR)
+        pastille(sl, 0.8, y, 0.48, VERT_F, n, taille=13)
+        texte(sl, 1.5, y + 0.02, 5.4, 0.9, t, taille=14, couleur=INK)
+    boite(sl, 7.3, 1.95, 5.4, 4.7, fond=rgb("#FBF4E6"), rayon=0.05, ligne=rgb("#EEDDBA"))
+    texte(sl, 7.6, 2.15, 4.9, 0.4, "Limites — données non disponibles", taille=15, gras=True, couleur=rgb("#8A5A0E"))
     lim = ["Aucune date de collecte individuelle : pas d'évolution des points de service.",
            "Ni transactions, ni comptes, ni genre des agents : l'usage réel du MM n'est pas mesuré.",
            "Séries télécoms arrêtées en 2019 ; Internet national uniquement (pas de ventilation territoriale).",
            "Absence dans les données ≠ absence réelle ; distances à vol d'oiseau.",
            "Aucune analyse causale possible (pas de variable explicative)."]
     texte(sl, 7.6, 2.7, 4.9, 3.8, [[("—  ", {"couleur": OR, "gras": True}), (l, {})] for l in lim], taille=12.5,
-          couleur=rgb("#DCE8E1"), espace_apres=7)
-    texte(sl, 0.8, 5.4, 6.2, 1.2, [[("Tableau de bord interactif : ", {"gras": True, "couleur": OR}),
-                                    ("7 pages, filtres globaux (période, territoire, opérateur, catégorie, statut), cartes, "
-                                     "téléchargements CSV et fiche méthodologique — streamlit run app.py", {})]], taille=12.5, couleur=rgb("#DCE8E1"))
-    pied(sl, "ensemble des fichiers de data/ ; méthode et contrôles : methodologie_et_limites.md, data_dictionary.md.", 10, sombre=True)
+          couleur=INK, espace_apres=7)
+    boite(sl, 0.8, 5.55, 6.1, 1.1, fond=TEINTE, rayon=0.06, ligne=LIGNE)
+    texte(sl, 1.05, 5.68, 5.6, 0.9, [[("Tableau de bord interactif : ", {"gras": True, "couleur": VERT_F}),
+                                     ("7 pages, filtres globaux (période, territoire, opérateur, catégorie, statut), cartes, "
+                                      "téléchargements CSV et fiche méthodologique — streamlit run app.py", {})]], taille=12.5, couleur=INK2)
+    pied(sl, "ensemble des fichiers de data/ ; méthode et contrôles : methodologie_et_limites.md, data_dictionary.md.", 10)
     notes(sl, "Conclusion fondée exclusivement sur les indicateurs calculés ; les limites reprennent l'onglet « Analyses impossibles » du tableau de bord.")
 
     C.OUTPUTS_DIR.mkdir(exist_ok=True)

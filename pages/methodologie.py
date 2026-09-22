@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 
 from src import config as C, indicators as I, recommandations as R, ui
+from src.etat import valeur_page
 from src.contexte import contexte
 
 ctx = contexte()
@@ -59,7 +60,8 @@ with onglets[2]:
     st.dataframe(joints, hide_index=True, width="stretch")
 
 with onglets[3]:
-    vue = st.segmented_control("Afficher", ["Tous", "Écarts seulement"], default="Tous", key="ctrl_vue")
+    valeur_page("ctrl_vue", "Tous")
+    vue = st.segmented_control("Afficher", ["Tous", "Écarts seulement"], key="ctrl_vue")
     c = ctrl if vue != "Écarts seulement" else ctrl[ctrl.resultat != "OK"]
     st.dataframe(c.rename(columns={"domaine": "Domaine", "controle": "Contrôle", "resultat": "Résultat", "detail": "Détail"}),
                  hide_index=True, width="stretch", height=520)
@@ -74,6 +76,7 @@ with onglets[4]:
 
 with onglets[5]:
     d = T["dictionnaire"]
+    valeur_page("dico_fichier", d.fichier.unique()[0])
     fichier = st.selectbox("Fichier", d.fichier.unique(), key="dico_fichier")
     st.dataframe(d[d.fichier == fichier].drop(columns=["fichier"]), hide_index=True, width="stretch")
     ui.telecharger(d, "dictionnaire_donnees")

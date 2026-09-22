@@ -4,6 +4,8 @@ Lancement : streamlit run app.py
 """
 from __future__ import annotations
 
+import os
+
 import streamlit as st
 
 from src import config as C
@@ -25,22 +27,24 @@ except DonneesManquantes as e:
     ui.vide(str(e), titre="Tables préparées introuvables")
     st.stop()
 
+# Page d'ouverture : l'accueil, sauf pour les tests automatisés (DASHBOARD_PAGE_INITIALE=pages/xxx.py)
+PAGE_INITIALE = os.environ.get("DASHBOARD_PAGE_INITIALE", "pages/accueil.py")
+
+
+def page(chemin: str, titre: str, icone: str) -> st.Page:
+    return st.Page(chemin, title=titre, icon=icone, default=chemin == PAGE_INITIALE)
+
+
 pages = {
-    "Synthèse": [
-        st.Page("pages/accueil.py", title="Vue d'ensemble", icon=":material/space_dashboard:", default=True),
-    ],
+    "Synthèse": [page("pages/accueil.py", "Vue d'ensemble", ":material/space_dashboard:")],
     "Analyses": [
-        st.Page("pages/internet.py", title="Usage d'Internet", icon=":material/language:"),
-        st.Page("pages/telecoms.py", title="Télécommunications", icon=":material/cell_tower:"),
-        st.Page("pages/services_financiers.py", title="Services financiers", icon=":material/account_balance:"),
-        st.Page("pages/inclusion.py", title="Inclusion territoriale", icon=":material/map:"),
+        page("pages/internet.py", "Usage d'Internet", ":material/language:"),
+        page("pages/telecoms.py", "Télécommunications", ":material/cell_tower:"),
+        page("pages/services_financiers.py", "Services financiers", ":material/account_balance:"),
+        page("pages/inclusion.py", "Inclusion territoriale", ":material/map:"),
     ],
-    "Décision": [
-        st.Page("pages/recommandations.py", title="Recommandations", icon=":material/flag:"),
-    ],
-    "Référence": [
-        st.Page("pages/methodologie.py", title="Méthodologie", icon=":material/menu_book:"),
-    ],
+    "Décision": [page("pages/recommandations.py", "Recommandations", ":material/flag:")],
+    "Référence": [page("pages/methodologie.py", "Méthodologie", ":material/menu_book:")],
 }
 nav = st.navigation(pages, position="sidebar")
 barre_laterale(T["pop_commune"])

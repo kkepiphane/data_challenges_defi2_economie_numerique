@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 
 from src import charts, config as C, indicators as I, ui
+from src.etat import valeur_page
 from src.contexte import contexte, puces_filtres
 from src.formatage import nombre, pct, pp
 
@@ -20,9 +21,11 @@ ui.entete(
 )
 
 with st.popover("Règles de calcul des phases", icon=":material/tune:"):
-    seuil = st.slider("Seuil de stagnation (points)", 0.0, 2.0, 0.25, 0.05, key="seuil_stagnation",
+    valeur_page("seuil_stagnation", 0.25)
+    valeur_page("tolerance_phase", 0.1)
+    seuil = st.slider("Seuil de stagnation (points)", 0.0, 2.0, step=0.05, key="seuil_stagnation",
                       help="|variation| ≤ seuil : stagnation ; variation < −seuil : recul.")
-    tol = st.slider("Tolérance « rythme constant » (points)", 0.0, 1.0, 0.1, 0.05, key="tolerance_phase",
+    tol = st.slider("Tolérance « rythme constant » (points)", 0.0, 1.0, step=0.05, key="tolerance_phase",
                     help="Accélération : variation supérieure à la précédente + tolérance.")
 
 bm_all = I.phases_internet(ctx.T["internet_bm"], seuil, tol)
@@ -53,17 +56,23 @@ with ui.carte("courbe"):
     ui.titre_carte("Part de la population utilisant Internet",
                    aide="Banque mondiale, World Development Indicators (donnée UIT), "
                         "fichier individus-utilisant-internet-de-la-population-.csv.")
-    comparer = st.toggle("Comparer aux taux de pénétration par abonnements (2013–2019)", key="cmp_abonnements")
+    CMP = "Taux de pénétration par abonnements (2013–2019)"
+    valeur_page("cmp_abonnements", None)
+    comparer = st.pills("Comparer avec", [CMP], selection_mode="single", key="cmp_abonnements") == CMP
     comp = None
     if comparer:
         tel = ctx.T["telecom"]
         comp = tel[(tel.famille == "Internet — pénétration") & tel.annee.between(a0, a1)][["libelle", "annee", "valeur"]]
-        if comp.empty:
-            ui.source("Aucune année 2013–2019 dans la période choisie.")
-            comp = None
-    ui.graphique(charts.courbe_internet(d, comp, hauteur=420), "courbe_internet")
-    if comparer and comp is not None:
-        ui.source("Un taux par abonnements compte des abonnements, pas des personnes : les deux mesures ne sont pas substituables.")
+    ui.graphique(charts.courbe_internet(d, comp if comp is not None and not comp.empty else None, hauteur=420), "courbe_internet")
+    if comparer:
+        if comp is None or comp.empty:
+            ui.source(f"Séries par abonnements disponibles de 2013 à 2019 uniquement : aucune année dans la période {a0}–{a1}.")
+        else:
+            ui.source(f"Usage (Banque mondiale) : {int(d.annee.min())}–{int(d.annee.max())}. Abonnements (séries sectorielles) : "
+                      f"{int(comp.annee.min())}–{int(comp.annee.max())} seulement, aucune valeur estimée hors de ces années. "
+                      "Un taux par abonnements compte des abonnements, pas des personnes : les mesures ne sont pas substituables.")
+    else:
+        ui.source("Source : Banque mondiale, WDI (donnée UIT).")
 
 c1, c2 = st.columns([1.5, 1], gap="medium")
 with c1:

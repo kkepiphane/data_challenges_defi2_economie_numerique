@@ -11,29 +11,32 @@ showErrorDetails = true
 
 [theme]
 base = "light"
-primaryColor = "#1E6B4F"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#EAF3EE"
-textColor = "#141414"
-borderColor = "#CBDDD2"
-dataframeBorderColor = "#D6E5DC"
-dataframeHeaderBackgroundColor = "#EAF3EE"
+primaryColor = "#176B57"
+backgroundColor = "#FAFCFB"
+secondaryBackgroundColor = "#E6F2EC"
+textColor = "#15211E"
+linkColor = "#176B57"
+borderColor = "#CFE3D9"
+dataframeBorderColor = "#D4E8DF"
+dataframeHeaderBackgroundColor = "#E6F2EC"
 font = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap, 'Segoe UI', sans-serif"
 headingFont = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap, 'Segoe UI', sans-serif"
-headingFontWeights = [700, 650, 600, 600, 600, 600]
+headingFontWeights = [700, 600, 600, 600, 600, 600]
 baseRadius = "0.3rem"
 buttonRadius = "0.3rem"
 showWidgetBorder = true
 showSidebarBorder = true
-greenColor = "#237B52"
-yellowColor = "#B5862A"
-redColor = "#B3312C"
-blueColor = "#4868B0"
-chartCategoricalColors = ["#237B52", "#B5862A", "#4868B0"]
+greenColor = "#23836A"
+yellowColor = "#C7851A"
+redColor = "#B7463B"
+blueColor = "#3A5F9E"
+chartCategoricalColors = ["#23836A", "#3A5F9E", "#C7851A"]
 
 [theme.sidebar]
-backgroundColor = "#F1F7F3"
-secondaryBackgroundColor = "#E1EEE6"
-textColor = "#14261D"
-primaryColor = "#1E6B4F"
-borderColor = "#C6DACE"
+backgroundColor = "#EFF8F4"
+secondaryBackgroundColor = "#E0EFE7"
+textColor = "#15211E"
+primaryColor = "#176B57"
+linkColor = "#176B57"
+borderColor = "#C7DDD2"
+headingFontWeights = [700, 600, 600, 600, 600, 600]

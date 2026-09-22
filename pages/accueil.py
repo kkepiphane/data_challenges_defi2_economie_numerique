@@ -95,8 +95,7 @@ with c1:
                                f"{entier(r.population)} hab." for r in sans.itertuples()],
                     hovertemplate="%{hovertext}<extra></extra>", name="Aucun établissement"))
             if f.geo_actif and not ctx.agents_geo.empty:
-                c, z = charts._zoom(ctx.agents_geo.lat, ctx.agents_geo.lon, 520)
-                fig.update_layout(map=dict(center=c, zoom=z))
+                charts.recadrer(fig, ctx.agents_geo.lat, ctx.agents_geo.lon, 520)
             ui.graphique(fig, "carte_accueil")
 
 with c2:
@@ -147,8 +146,8 @@ with ui.carte("regions"):
         st.dataframe(tab, hide_index=True, width="stretch", column_config={
             "Population": st.column_config.NumberColumn(format="localized"),
             "Agents MM": st.column_config.NumberColumn(format="localized"),
-            "Hab. / agent": st.column_config.ProgressColumn(color="#A3A39D", format="%.0f", min_value=0, max_value=_max("Hab. / agent")),
-            "Hab. / établissement": st.column_config.ProgressColumn(color="#A3A39D", format="%.0f", min_value=0, max_value=_max("Hab. / établissement")),
+            "Hab. / agent": st.column_config.ProgressColumn(color="#23836A", format="%.0f", min_value=0, max_value=_max("Hab. / agent")),
+            "Hab. / établissement": st.column_config.ProgressColumn(color="#23836A", format="%.0f", min_value=0, max_value=_max("Hab. / établissement")),
             "Agents / établ.": st.column_config.NumberColumn(format="%.1f"),
             f"Agents > {C.SEUIL_ELOIGNEMENT_KM} km (%)": st.column_config.NumberColumn(format="%.1f"),
         })

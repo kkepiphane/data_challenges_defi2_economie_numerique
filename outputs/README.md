@@ -30,7 +30,8 @@ L'application ne lit que `data_processed/` (déjà fourni). Pour tout reconstrui
 python -m src.pipeline    # data/ → data_processed/ : nettoyage, jointures, distances, 47 contrôles, dictionnaire
 python -m src.docs        # methodologie_et_limites.md (chiffres recalculés)
 python -m src.rapport     # outputs/rapport_inclusion_numerique_togo.pptx + figures
-python tests/test_app.py  # 7 pages × 17 scénarios de filtres, niveaux et vues (119 exécutions)
+python tests/test_app.py    # 7 pages × 19 scénarios de filtres, niveaux et vues (133 exécutions)
+python tests/test_reset.py  # Savanes + filtres de page → « Réinitialiser » → contenu national identique, 7 pages
 ```
 
 Le pipeline cherche les contours préfectoraux dans `../defi1/data/processed/prefectures.gpkg`, puis dans
@@ -49,15 +50,19 @@ par un message explicite ; les cartes de points restent disponibles.
 | Recommandations | Territoires ciblés par règles explicites (C1–C4), actions et impacts qualitatifs, export CSV |
 | Méthodologie | Sources, formules, jointures, 47 contrôles, journal de qualité, dictionnaire, champs absents, analyses impossibles |
 
-**Filtres globaux persistants** (barre latérale) : période, région → préfecture → commune (en cascade), opérateurs,
-agents à opérateur non renseigné, catégories et statuts d'établissements, bouton « Réinitialiser ». Chaque page
-rappelle sous son titre les filtres modifiés. Tous les tableaux sont téléchargeables en CSV.
+**Filtres globaux persistants** (barre latérale) : période, région → préfecture → commune (en cascade), opérateurs
+(Togocom, Moov, « Non renseigné »), catégories et statuts d'établissements. L'état est centralisé dans
+`st.session_state` (`src/etat.py`) : « Réinitialiser » remet les filtres globaux **et** les filtres propres aux pages
+(niveau, critère, vue, comparaison…) à leur valeur initiale ; le bouton n'est actif que si un filtre diffère de son
+défaut. Chaque page rappelle sous son titre les filtres modifiés. Tous les tableaux sont téléchargeables en CSV.
 
 ## Identité visuelle
 
-Interface sobre : fond blanc, encre noire, un vert institutionnel (#1E6B4F) pour les éléments actifs et des teintes
-vert pâle pour les cartes, sélecteurs et la barre latérale. Dans les graphiques, la couleur est réservée à l'information
-(trois teintes désaturées validées pour le daltonisme, rouge pour les alertes). Police Public Sans. Armoiries de la
+Interface sobre et contrastée : fond #FAFCFB, texte #15211E (secondaire #62706C), vert profond #176B57 pour les
+actions, sélections, onglets actifs et chiffres clés, surfaces menthe #EFF8F4 pour les cartes. Dans les graphiques :
+vert #23836A pour la série principale, bleu ardoise #3A5F9E réservé aux comparaisons et opérateurs, ambre #C7851A
+pour l'attention (toujours étiqueté), rouge #B7463B réservé aux territoires sans établissement et aux alertes factuelles.
+Graisses de police limitées à 400/500/600/700. Police Public Sans. Armoiries de la
 République togolaise en en-tête ; précisions méthodologiques dans les infobulles « i ».
 
 ## Structure
@@ -78,7 +83,7 @@ assets/                 feuille de style, armoiries du Togo, logo, favicon
 data/                   sources (lecture seule)
 data_processed/         tables nettoyées, géométries, contrôles
 data_defi1/             contours préfectoraux du Défi 1 (archive uniquement)
-tests/                  test de fumée Streamlit
+tests/                  tests Streamlit (fumée, réinitialisation)
 ```
 
 ## Documents

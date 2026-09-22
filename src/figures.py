@@ -97,7 +97,7 @@ def carte_mm_seul(agents: pd.DataFrame, communes: pd.DataFrame, finance: pd.Data
     autres = a[a.statut_couverture != statut_mm_seul]
     b = g.total_bounds
     fig, ax = plt.subplots(figsize=(5.0, 7.2))
-    g.plot(ax=ax, color="#F4F2EC", edgecolor="#D9D5C8", linewidth=0.5, zorder=1)
+    g.plot(ax=ax, color=T.GRID, edgecolor=T.AXIS, linewidth=0.5, zorder=1)
     ax.scatter(autres.lon, autres.lat, s=0.8, color="#9FB3A7", alpha=0.45, linewidths=0, zorder=2)
     ax.scatter(finance.lon, finance.lat, s=4, color=T.INK, marker="s", alpha=0.85, linewidths=0, zorder=3)
     ax.scatter(seul.lon, seul.lat, s=5, color=T.CRITIQUE, alpha=0.95, linewidths=0, zorder=4)
@@ -125,7 +125,7 @@ def matrice(t: pd.DataFrame, n: int, chemin: Path) -> Path:
            "score": lambda v: nombre(v, 2)}
     txt = [[("aucun" if (c == "hab_par_etab" and e == 0) else fmt[c](v)) for c in cols for v, e in [(r[c], r.etablissements)]]
            for _, r in m.iterrows()]
-    cmap = LinearSegmentedColormap.from_list("chaud", ["#FBF1EA", "#F6DCCB", "#EEBC9E", "#E29A72", "#D3784C"])
+    cmap = LinearSegmentedColormap.from_list("vert", T.RAMPE_VERTE[:5])
     fig, ax = plt.subplots(figsize=(7.4, 0.36 * n + 0.8))
     ax.imshow(rangs, cmap=cmap, vmin=0, vmax=1, aspect="auto")
     for i in range(len(m)):

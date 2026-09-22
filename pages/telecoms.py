@@ -3,6 +3,8 @@ import pandas as pd
 import streamlit as st
 
 from src import charts, config as C, indicators as I, theme as T, ui
+from src import etat
+from src.etat import valeur_page
 from src.contexte import contexte, puces_filtres
 from src.formatage import compact, entier, nombre, pct
 from src.series_meta import STATUT_QUALITE_LIBELLES
@@ -153,11 +155,14 @@ with onglets[3]:
     familles = sorted(tel.famille.unique())
     c1, c2 = st.columns([1, 2], gap="medium")
     with c1:
-        fam = st.selectbox("Famille", familles, index=familles.index("Internet — abonnés") if "Internet — abonnés" in familles else 0,
-                           key="exp_famille")
+        valeur_page("exp_famille", "Internet — abonnés" if "Internet — abonnés" in familles else familles[0])
+        if st.session_state.exp_famille not in familles:
+            st.session_state.exp_famille = st.session_state[etat.REGISTRE]["exp_famille"]
+        fam = st.selectbox("Famille", familles, key="exp_famille")
         dispo = tel[(tel.famille == fam) & (tel.groupe.isin(ops + ["Marché", "Non précisé"]))]
         libs = list(dict.fromkeys(dispo.libelle))
-        choix = st.multiselect("Indicateurs (4 au plus)", libs, default=libs[:3], key=f"exp_ind_{fam}", max_selections=4,
+        valeur_page(f"exp_ind_{fam}", libs[:3])
+        choix = st.multiselect("Indicateurs (4 au plus)", libs, key=f"exp_ind_{fam}", max_selections=4,
                                placeholder="Choisir")
     sel = dispo[dispo.libelle.isin(choix)]
     with c2:

@@ -1,50 +1,54 @@
 """Jetons de design partagés (tableau de bord et rapport).
 
-Identité sobre : blanc dominant, encre noire, gris pour la structure. La couleur est réservée à
-l'information : trois teintes catégorielles désaturées (validées toutes paires : CVD ΔE ≥ 10,
-vision normale ≥ 18, contraste ≥ 3:1) et un rouge réservé aux alertes.
+Identité verte institutionnelle, contrastée et accessible :
+- vert profond #176B57 pour les actions, sélections et chiffres importants (6,2:1 sur le fond) ;
+- vert principal #23836A pour la série principale ;
+- bleu ardoise #3A5F9E réservé aux séries de comparaison (séparation validée avec le vert : ΔE ≥ 15) ;
+- ambre #C7851A pour l'attention (3:1 : toujours accompagné d'une étiquette) ;
+- rouge #B7463B réservé aux territoires sans établissement recensé et aux alertes factuelles.
 """
 from __future__ import annotations
 
 # Encre et surfaces
-INK = "#141414"
-INK_2 = "#4A4A47"
-MUTED = "#85857F"
-BG = "#FFFFFF"
-SURFACE = "#FFFFFF"
-SUBTLE = "#F6F6F4"
-LINE = "#E4E4E0"
-GRID = "#EEEEEA"
-AXIS = "#C9C9C3"
-NEUTRE = "#A3A39D"
+INK = "#15211E"
+INK_2 = "#62706C"
+MUTED = "#7A8783"
+BG = "#FAFCFB"
+SURFACE = "#FAFCFB"
+MENTHE = "#EFF8F4"
+LINE = "#D4E8DF"
+GRID = "#E6EEEA"
+AXIS = "#C3D3CB"
+NEUTRE = "#A7B3AE"
 
-# Couleurs d'information (noms conservés pour compatibilité)
-GREEN_700 = "#237B52"   # série 1 — vert institutionnel
-GOLD = "#B5862A"        # série 2 — ocre
-INDIGO = "#4868B0"      # série 3 — bleu ardoise
-TERRACOTTA = "#3A3A36"  # barres de classement : encre (la couleur reste réservée à l'alerte)
-GREEN_900 = "#141414"
+# Couleurs d'information (noms historiques conservés pour compatibilité)
+VERT_FONCE = "#176B57"
+GREEN_700 = "#23836A"   # série principale
+INDIGO = "#3A5F9E"      # bleu ardoise : comparaison uniquement
+GOLD = "#C7851A"        # ambre : attention
+TERRACOTTA = "#4F5E5A"  # barres de classement (encre adoucie)
+GREEN_900 = "#15211E"
 
-CATEGORIELLE = [GREEN_700, GOLD, INDIGO]
+CATEGORIELLE = [GREEN_700, INDIGO, GOLD]
 
 # Statuts (réservés)
 BON = GREEN_700
 ALERTE = GOLD
 SERIEUX = "#B8643A"
-CRITIQUE = "#B3312C"
+CRITIQUE = "#B7463B"
 
-# Rampes séquentielles neutres (clair → foncé)
-RAMPE_CHAUDE = ["#F1F1EE", "#DCDCD7", "#C0C0BA", "#9E9E97", "#7A7A73", "#595953", "#3B3B37", "#232320"]
-RAMPE_VERTE = ["#EEF4F0", "#D2E3D9", "#AFCDBC", "#86B39A", "#5E9679", "#3D7E5E", "#237B52", "#175A3B"]
-RAMPE_SABLE = ["#F7F7F5", "#EDEDEA", "#E0E0DB", "#CFCFC9", "#BABAB3", "#A3A39C"]
-ORDINALE_VERTE = ["#9DB5A8", "#5E8A74", "#2E6A52"]  # 2G → 3G → 4G (validée ordinale)
+# Rampes séquentielles (clair → foncé)
+RAMPE_CHAUDE = ["#EEF3F1", "#D7E1DD", "#BACAC3", "#98ADA5", "#768E86", "#566E67", "#3A504A", "#22332F"]
+RAMPE_VERTE = ["#EFF8F4", "#D2EADF", "#ACD6C4", "#7FBEA5", "#4FA285", "#23836A", "#176B57", "#0F4F40"]
+RAMPE_SABLE = ["#F4F8F6", "#E6EEEA", "#D6E1DC", "#C3D1CB", "#AFC0B9", "#99ACA4"]
+ORDINALE_VERTE = ["#7FBEA5", "#23836A", "#0F4F40"]  # 2G → 3G → 4G
 
 OPERATEURS = {"Togocom": GREEN_700, "Moov": INDIGO, "Moov + Togocom": GOLD, "Togocom seul": GREEN_700,
               "Moov seul": INDIGO, "Non renseigné": NEUTRE, "Marché": INK_2, "Non précisé": NEUTRE}
-CATEGORIES_FIN = {"Banque": INK_2, "Micro-finance": INK_2, "Mutuelle": INK_2, "Assurance": INK_2}
+CATEGORIES_FIN = {"Banque": TERRACOTTA, "Micro-finance": TERRACOTTA, "Mutuelle": TERRACOTTA, "Assurance": TERRACOTTA}
 CATEGORIES_CARTE = {"Banque": GREEN_700, "Micro-finance et mutuelles": GOLD, "Assurance": INDIGO}
 
-PHASES = {"Accélération": GREEN_700, "Rythme constant": "#8FB3A0", "Progression ralentie": "#C3D6CB",
-          "Stagnation": "#C9C9C3", "Recul": CRITIQUE, "—": "#C9C9C3"}
+PHASES = {"Accélération": GREEN_700, "Rythme constant": "#7FBEA5", "Progression ralentie": "#BFDDD0",
+          "Stagnation": "#C3D3CB", "Recul": CRITIQUE, "—": "#C3D3CB"}
 
 FONT = "'Public Sans', 'Segoe UI', system-ui, -apple-system, sans-serif"

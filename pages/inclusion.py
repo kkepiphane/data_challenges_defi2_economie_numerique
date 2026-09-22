@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from src import charts, config as C, indicators as I, theme as T, ui
+from src.etat import valeur_page
 from src.contexte import contexte, geo, puces_filtres
 from src.formatage import entier, km, nombre, pct
 
@@ -33,14 +34,20 @@ FORMAT = {"score": lambda v: nombre(v, 2), "hab_par_etab": entier, "hab_par_agen
 
 c1, c2, c3 = st.columns([1.3, 1.5, 1], gap="medium", vertical_alignment="bottom")
 with c1:
-    niveau_lib = st.segmented_control("Niveau", ["Région", "Préfecture", "Commune"], default="Préfecture", key="niv_inclusion")
+    valeur_page("niv_inclusion", "Préfecture")
+    niveau_lib = st.segmented_control("Niveau", ["Région", "Préfecture", "Commune"], key="niv_inclusion")
 niveau_lib = niveau_lib or "Préfecture"
 niveau = {"Région": "region", "Préfecture": "prefecture", "Commune": "commune"}[niveau_lib]
 with c2:
+    valeur_page("critere_inclusion", "score")
     critere = st.selectbox("Classer selon", list(INDICATEURS), format_func=INDICATEURS.get, key="critere_inclusion")
 t = ctx.territoire(niveau)
 with c3:
-    top_n = st.slider("Territoires affichés", 3, max(3, min(40, len(t))), min(15, max(3, len(t))), key=f"topn_{niveau}") if len(t) > 3 else len(t)
+    if len(t) > 3:
+        valeur_page(f"topn_{niveau}_{len(t)}", min(15, len(t)))
+        top_n = st.slider("Territoires affichés", 3, min(40, len(t)), key=f"topn_{niveau}_{len(t)}")
+    else:
+        top_n = len(t)
 
 if t.empty:
     ui.vide("Aucun territoire ne correspond aux filtres.", titre="Aucun territoire")
@@ -75,7 +82,7 @@ with g1:
         if niveau == "commune":
             ag = ctx.agents_geo.merge(t[["territoire", "statut_couverture"]], left_on="unite_commune", right_on="territoire", how="inner")
             fig = charts.carte(hauteur=560, lat=ag.lat if f.geo_actif else None, lon=ag.lon if f.geo_actif else None)
-            for stt, coul, lib, taille, op in [(I.STATUT_MM_ET_ETAB, "#A3A39D", "Commune avec établissement", 4, 0.35),
+            for stt, coul, lib, taille, op in [(I.STATUT_MM_ET_ETAB, "#A7B3AE", "Commune avec établissement", 4, 0.35),
                                                (I.STATUT_MM_SEUL, T.CRITIQUE, "Commune sans établissement", 5, 0.9)]:
                 sub = ag[ag.statut_couverture == stt]
                 if not sub.empty:
@@ -108,8 +115,7 @@ with g1:
                     hovertext=[f"<b>{r.territoire}</b><br>Aucun établissement recensé<br>{entier(r.agents)} agents MM · {entier(r.population)} hab."
                                for r in vides.itertuples()], hovertemplate="%{hovertext}<extra></extra>"))
             if f.geo_actif and not ctx.agents_geo.empty:
-                c, z = charts._zoom(ctx.agents_geo.lat, ctx.agents_geo.lon, 560)
-                fig.update_layout(map=dict(center=c, zoom=z))
+                charts.recadrer(fig, ctx.agents_geo.lat, ctx.agents_geo.lon, 560)
             ui.graphique(fig, "carte_inclusion_choro")
 
 with g2:
@@ -182,7 +188,7 @@ with e2:
             ui.vide("Aucun canton avec point de service.")
         else:
             vc = pc.statut_couverture.value_counts().reindex([I.STATUT_MM_ET_ETAB, I.STATUT_MM_SEUL, I.STATUT_ETAB_SEUL]).fillna(0).astype(int)
-            coul = {I.STATUT_MM_ET_ETAB: "#8A8A84", I.STATUT_MM_SEUL: T.CRITIQUE, I.STATUT_ETAB_SEUL: "#C9C9C3"}
+            coul = {I.STATUT_MM_ET_ETAB: "#7A8783", I.STATUT_MM_SEUL: T.CRITIQUE, I.STATUT_ETAB_SEUL: "#C3D3CB"}
             ui.graphique(charts.barres_h(["Agents et établissement", "Agents seulement", "Établissement seulement"], vc.values,
                                          [coul[k] for k in vc.index], hauteur=190,
                                          texte=[f"{entier(v)} · {pct(100 * v / vc.sum(), 0)}" for v in vc.values],
@@ -209,7 +215,7 @@ with ui.carte("table_inclusion"):
         I.LIBELLES["agents_par_etab"]: st.column_config.NumberColumn(format="%.1f"),
         I.LIBELLES["dist_mediane_km"]: st.column_config.NumberColumn(format="%.2f"),
         I.LIBELLES["part_eloignes_pct"]: st.column_config.NumberColumn(format="%.1f"),
-        I.LIBELLES["score"]: st.column_config.ProgressColumn(color="#A3A39D", format="%.2f", min_value=0, max_value=1)})
+        I.LIBELLES["score"]: st.column_config.ProgressColumn(color="#23836A", format="%.2f", min_value=0, max_value=1)})
     ui.telecharger(tab, f"inclusion_{niveau}")
 
 ui.note_bas("<b>Absence dans les données ≠ absence réelle.</b> « Sans établissement » signifie qu'aucun établissement n'est recensé "

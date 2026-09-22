@@ -56,9 +56,10 @@ def courbe_internet(d: pd.DataFrame, comparaison: pd.DataFrame | None = None, ha
                       "<br>Variation : %{customdata[0]:+.1f} pt<br>Phase : %{customdata[1]}"
                       "<br><span style='color:#7D8A83'>Source : Banque mondiale (WDI/UIT)</span><extra></extra>"))
     if comparaison is not None and not comparaison.empty:
-        for (lib, g), coul in zip(comparaison.groupby("libelle", sort=False), [T.GOLD, T.INDIGO]):
+        for (lib, g), tiret in zip(comparaison.groupby("libelle", sort=False), ["solid", "dot"]):
+            coul = T.INDIGO
             fig.add_trace(go.Scatter(
-                x=g.annee, y=g.valeur, mode="lines+markers", name=lib, line=dict(color=coul, width=2),
+                x=g.annee, y=g.valeur, mode="lines+markers", name=lib, line=dict(color=coul, width=2, dash=tiret),
                 marker=dict(size=7, color=coul, line=dict(color=T.SURFACE, width=2)),
                 hovertemplate=f"<b>%{{x}}</b><br>{lib} : <b>%{{y:.1f}} %</b>"
                               "<br><span style='color:#7D8A83'>Source : séries sectorielles 2013–2019</span><extra></extra>"))
@@ -194,7 +195,7 @@ def sparkline(x, y, couleur: str = T.INK, hauteur: int = 90) -> go.Figure:
 # Barres horizontales
 # ======================================================================================
 def barres_h(labels, valeurs, couleurs=None, hauteur: int | None = None, texte=None, hover: list[str] | None = None,
-             couleur: str = "#62625D", titre_x: str = "", max_px: float = 20) -> go.Figure:
+             couleur: str = T.TERRACOTTA, titre_x: str = "", max_px: float = 20) -> go.Figure:
     labels, valeurs = list(labels), list(valeurs)
     n = len(labels)
     hauteur = hauteur or max(160, 30 * n + 60)
@@ -268,9 +269,15 @@ def carte(hauteur: int = 640, lat: pd.Series | None = None, lon: pd.Series | Non
         hoverlabel=dict(bgcolor=T.SURFACE, bordercolor=T.LINE, font=dict(family=T.FONT, size=12, color=T.INK)),
         legend=dict(orientation="h", yanchor="top", y=0.99, xanchor="left", x=0.01, bgcolor="rgba(255,255,255,0.92)",
                     bordercolor=T.LINE, borderwidth=1, font=dict(size=12, color=T.INK), itemsizing="constant"),
-        uirevision="carte",
+        uirevision=f"{centre['lat']:.3f}|{centre['lon']:.3f}|{zoom:.2f}",
     )
     return fig
+
+
+def recadrer(fig: go.Figure, lat: pd.Series, lon: pd.Series, hauteur: int) -> None:
+    """Recentre la carte sur les points et change sa révision : la vue suit le périmètre filtré."""
+    centre, zoom = _zoom(lat, lon, hauteur)
+    fig.update_layout(map=dict(center=centre, zoom=zoom), uirevision=f"{centre['lat']:.3f}|{centre['lon']:.3f}|{zoom:.2f}")
 
 
 def couche_choroplethe(fig: go.Figure, geojson: dict, df: pd.DataFrame, cle: str, valeur: str, titre: str,
@@ -307,7 +314,7 @@ def couche_densite(fig: go.Figure, df: pd.DataFrame, rayon: int = 9) -> None:
 def matrice(rangs: pd.DataFrame, textes: pd.DataFrame, hover: pd.DataFrame, hauteur: int | None = None) -> go.Figure:
     n = len(rangs)
     hauteur = hauteur or max(260, 26 * n + 90)
-    echelle = ["#F7F7F5", "#E7E7E3", "#D3D3CE", "#BCBCB6", "#A3A39C"]
+    echelle = ["#F4F8F6", "#E1EBE6", "#CADAD2", "#B2C6BC", "#98AFA5"]
     fig = go.Figure(go.Heatmap(
         z=rangs.values, x=list(rangs.columns), y=list(rangs.index), zmin=0, zmax=1,
         colorscale=[[i / 4, c] for i, c in enumerate(echelle)], xgap=2, ygap=2,
