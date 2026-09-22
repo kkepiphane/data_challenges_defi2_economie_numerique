@@ -4,6 +4,11 @@
    La couleur est réservée à l'information.
 ------------------------------------------------------------------- */
 :root {
+  --accent-fort: #1E6B4F;
+  --accent-pale: #F2F8F4;
+  --accent-bord: #D3E4DA;
+  --ocre-pale: #FBF6EA;
+  --ocre-bord: #EADFC4;
   --ink: #141414;
   --ink-2: #4A4A47;
   --muted: #85857F;
@@ -43,36 +48,36 @@ h1, h2, h3 { letter-spacing: -.01em; }
 
 /* ---------- Cartes (conteneurs clés « card… ») ---------- */
 [class*="st-key-card"] {
-  background: #FFFFFF;
-  border: 1px solid var(--line);
+  background: var(--accent-pale);
+  border: 1px solid var(--accent-bord);
   border-radius: var(--radius);
   padding: 1.15rem 1.25rem 1rem 1.25rem;
 }
 .card-title { font-size: .98rem; font-weight: 600; color: var(--ink); margin: 0 0 .1rem 0; display: flex; align-items: center; gap: .4rem; }
 .card-sub { font-size: .8rem; color: var(--muted); margin: 0 0 .35rem 0; line-height: 1.45; }
 .info { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%;
-  border: 1px solid #BDBDB7; color: var(--muted); font-size: 10px; font-weight: 600; font-style: normal; cursor: help; line-height: 1; }
+  border: 1px solid #9DBFAC; color: var(--accent-fort); font-size: 10px; font-weight: 600; font-style: normal; cursor: help; line-height: 1; }
 
 /* ---------- KPI ---------- */
-.kpi { background: #FFFFFF; border: 1px solid var(--line); border-radius: var(--radius);
+.kpi { background: var(--accent-pale); border: 1px solid var(--accent-bord); border-radius: var(--radius);
   padding: 1rem 1.1rem .8rem 1.1rem; height: 100%; min-height: 150px; display: flex; flex-direction: column; }
 .kpi-label { font-size: .8rem; font-weight: 500; color: var(--ink-2); line-height: 1.35; }
 .kpi-value { font-size: 1.9rem; font-weight: 600; color: var(--ink); letter-spacing: -.02em; line-height: 1.15; margin-top: .45rem; }
 .kpi-value small { font-size: .95rem; font-weight: 500; color: var(--muted); margin-left: .2rem; letter-spacing: 0; }
 .kpi-sub { font-size: .8rem; color: var(--ink-2); line-height: 1.4; margin-top: .2rem; min-height: 1.1rem; }
 .kpi-foot { margin-top: auto; padding-top: .7rem; font-size: .7rem; color: var(--muted); }
-.kpi-foot b { color: var(--ink-2); font-weight: 600; }
+.kpi-foot b { color: var(--accent-fort); font-weight: 600; }
 .kpi.alert .kpi-value { color: var(--critical); }
 
 /* ---------- Constats ---------- */
-.insight { padding: .75rem 0; border-top: 1px solid var(--line); }
+.insight { padding: .75rem 0; border-top: 1px solid var(--accent-bord); }
 .insight:first-child { border-top: none; padding-top: .2rem; }
 .insight .t { font-weight: 600; color: var(--ink); font-size: .92rem; line-height: 1.4; }
 .insight .d { color: var(--ink-2); font-size: .82rem; line-height: 1.45; margin-top: .15rem; }
 .insight.alert .t b { color: var(--critical); }
 
 /* ---------- Notes ---------- */
-.callout { border-radius: var(--radius); padding: .7rem .9rem; background: var(--subtle); color: var(--ink-2);
+.callout { border-radius: var(--radius); padding: .7rem .9rem; background: var(--ocre-pale); border: 1px solid var(--ocre-bord); color: var(--ink-2);
   font-size: .82rem; line-height: 1.5; }
 .callout b { color: var(--ink); }
 .callout.alert b { color: var(--critical); }
@@ -87,7 +92,7 @@ h1, h2, h3 { letter-spacing: -.01em; }
 .empty .d { font-size: .8rem; color: var(--muted); margin-top: .25rem; }
 
 /* ---------- Recommandations ---------- */
-.reco { background: #FFFFFF; border: 1px solid var(--line); border-radius: var(--radius);
+.reco { background: var(--accent-pale); border: 1px solid var(--accent-bord); border-radius: var(--radius);
   padding: 1rem 1.15rem; height: 100%; display: flex; flex-direction: column; gap: .6rem; }
 .reco-head { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; }
 .reco-terr { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
@@ -98,7 +103,7 @@ h1, h2, h3 { letter-spacing: -.01em; }
 .prio.p2 { color: #8A6A22; }
 .prio.p3 { color: var(--muted); }
 .reco-stats { display: flex; flex-wrap: wrap; column-gap: 1rem; row-gap: .15rem; font-size: .8rem; color: var(--ink-2);
-  padding: .45rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  padding: .45rem 0; border-top: 1px solid var(--accent-bord); border-bottom: 1px solid var(--accent-bord); }
 .reco-stats b { color: var(--ink); font-weight: 600; }
 .reco-row { font-size: .82rem; line-height: 1.45; color: var(--ink-2); }
 .reco-row .k { display: block; font-size: .7rem; font-weight: 600; color: var(--muted); margin-bottom: .15rem; }
@@ -119,3 +124,17 @@ hr { border-color: var(--line) !important; }
   .page-head h1 { font-size: 1.5rem; }
   .kpi-value { font-size: 1.6rem; }
 }
+
+/* ---------- Contrôles : accent sobre plutôt que gris ---------- */
+[data-baseweb="select"] > div { background-color: #EAF3EE; border-color: #C9DDD1; }
+[data-testid="stSidebar"] [data-baseweb="select"] > div { background-color: #E1EEE6; border-color: #C6DACE; }
+[data-testid="stTextInput"] input { background-color: #EAF3EE; }
+[data-testid="stSidebarNavItems"] a[aria-current="page"] { background-color: #D9EADF; }
+[data-testid="stSidebarNavItems"] a[aria-current="page"] span { color: var(--accent-fort); font-weight: 600; }
+[data-testid="stPopover"] button, [data-testid="stBaseButton-secondary"] { border-color: #C9DDD1; background-color: #EAF3EE; }
+[data-testid="stBaseButton-secondary"]:hover { border-color: var(--accent-fort); color: var(--accent-fort); }
+[data-testid="stDownloadButton"] button { color: var(--accent-fort); }
+
+/* ---------- Traduction de l'option « Select all » des listes ---------- */
+[role="option"][id$="__select_all__"] > div { font-size: 0 !important; }
+[role="option"][id$="__select_all__"] > div::after { content: "Tout sélectionner"; font-size: 14px; }

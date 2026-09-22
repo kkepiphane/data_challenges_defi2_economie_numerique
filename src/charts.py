@@ -297,7 +297,7 @@ def couche_points(fig: go.Figure, df: pd.DataFrame, nom: str, couleur: str, tail
 def couche_densite(fig: go.Figure, df: pd.DataFrame, rayon: int = 9) -> None:
     fig.add_trace(go.Densitymap(
         lat=df.lat, lon=df.lon, radius=rayon, name="Densité d'agents MM", showscale=False,
-        colorscale=[[0, "rgba(20,20,20,0)"], [0.25, "rgba(20,20,20,0.25)"], [0.6, "rgba(20,20,20,0.55)"], [1, "rgba(20,20,20,0.85)"]],
+        colorscale=[[0, "rgba(30,107,79,0)"], [0.2, "rgba(30,107,79,0.18)"], [0.55, "rgba(30,107,79,0.42)"], [1, "rgba(19,72,52,0.6)"]],
         hoverinfo="skip"))
 
 

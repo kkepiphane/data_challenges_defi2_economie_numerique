@@ -30,7 +30,7 @@ L'application ne lit que `data_processed/` (déjà fourni). Pour tout reconstrui
 python -m src.pipeline    # data/ → data_processed/ : nettoyage, jointures, distances, 47 contrôles, dictionnaire
 python -m src.docs        # methodologie_et_limites.md (chiffres recalculés)
 python -m src.rapport     # outputs/rapport_inclusion_numerique_togo.pptx + figures
-python tests/test_app.py  # 7 pages × 12 combinaisons de filtres (84 exécutions)
+python tests/test_app.py  # 7 pages × 17 scénarios de filtres, niveaux et vues (119 exécutions)
 ```
 
 Le pipeline cherche les contours préfectoraux dans `../defi1/data/processed/prefectures.gpkg`, puis dans
@@ -41,17 +41,24 @@ par un message explicite ; les cartes de points restent disponibles.
 
 | Page | Contenu |
 |---|---|
-| Vue exécutive | KPI avec année et source, carte des habitants par établissement, constats calculés, tableau régional, limites |
-| Adoption d'Internet | Série 1990–2022, variations annuelles, phases (seuils réglables), épisodes, comparaison avec la pénétration par abonnements |
-| Marché des télécoms | Parts de marché et HHI, 2G/3G/4G par opérateur, Internet fixe et fibre, CA et investissement, explorateur d'indicateurs |
-| Services financiers & MM | Carte multicouche (agents, établissements, population), vues réseau / opérateurs / densité, répartitions, recherche |
+| Vue d'ensemble | KPI avec année et source, carte des habitants par établissement, constats calculés, tableau régional |
+| Usage d'Internet | Série 1990–2022, variations annuelles, phases (seuils réglables), épisodes, comparaison avec la pénétration par abonnements |
+| Télécommunications | Parts de marché et HHI, 2G/3G/4G par opérateur, Internet fixe et fibre, CA et investissement, explorateur d'indicateurs |
+| Services financiers | Carte multicouche (agents, établissements, population), vues réseau / opérateurs / densité, répartitions, recherche |
 | Inclusion territoriale | Ratios par habitant (région, préfecture, commune), carte, classement, matrice de chaleur, éloignement, cantons |
 | Recommandations | Territoires ciblés par règles explicites (C1–C4), actions et impacts qualitatifs, export CSV |
-| Méthodologie & sources | Sources, formules, jointures, 47 contrôles, journal de qualité, dictionnaire, champs absents, analyses impossibles |
+| Méthodologie | Sources, formules, jointures, 47 contrôles, journal de qualité, dictionnaire, champs absents, analyses impossibles |
 
 **Filtres globaux persistants** (barre latérale) : période, région → préfecture → commune (en cascade), opérateurs,
 agents à opérateur non renseigné, catégories et statuts d'établissements, bouton « Réinitialiser ». Chaque page
-indique par des puces les filtres qu'elle applique et ceux sans objet. Tous les tableaux sont téléchargeables en CSV.
+rappelle sous son titre les filtres modifiés. Tous les tableaux sont téléchargeables en CSV.
+
+## Identité visuelle
+
+Interface sobre : fond blanc, encre noire, un vert institutionnel (#1E6B4F) pour les éléments actifs et des teintes
+vert pâle pour les cartes, sélecteurs et la barre latérale. Dans les graphiques, la couleur est réservée à l'information
+(trois teintes désaturées validées pour le daltonisme, rouge pour les alertes). Police Public Sans. Armoiries de la
+République togolaise en en-tête ; précisions méthodologiques dans les infobulles « i ».
 
 ## Structure
 
@@ -67,7 +74,7 @@ src/
   charts.py · ui.py     graphiques Plotly et composants d'interface
   figures.py · rapport.py   cartes matplotlib et deck python-pptx
   docs.py               methodologie_et_limites.md
-assets/                 feuille de style, logo
+assets/                 feuille de style, armoiries du Togo, logo, favicon
 data/                   sources (lecture seule)
 data_processed/         tables nettoyées, géométries, contrôles
 data_defi1/             contours préfectoraux du Défi 1 (archive uniquement)

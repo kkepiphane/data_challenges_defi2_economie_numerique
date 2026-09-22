@@ -11,13 +11,13 @@ showErrorDetails = true
 
 [theme]
 base = "light"
-primaryColor = "#141414"
+primaryColor = "#1E6B4F"
 backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F4F4F1"
+secondaryBackgroundColor = "#EAF3EE"
 textColor = "#141414"
-borderColor = "#E4E4E0"
-dataframeBorderColor = "#E4E4E0"
-dataframeHeaderBackgroundColor = "#F6F6F4"
+borderColor = "#CBDDD2"
+dataframeBorderColor = "#D6E5DC"
+dataframeHeaderBackgroundColor = "#EAF3EE"
 font = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap, 'Segoe UI', sans-serif"
 headingFont = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap, 'Segoe UI', sans-serif"
 headingFontWeights = [700, 650, 600, 600, 600, 600]
@@ -32,8 +32,8 @@ blueColor = "#4868B0"
 chartCategoricalColors = ["#237B52", "#B5862A", "#4868B0"]
 
 [theme.sidebar]
-backgroundColor = "#F7F7F5"
-secondaryBackgroundColor = "#FFFFFF"
-textColor = "#141414"
-primaryColor = "#141414"
-borderColor = "#E4E4E0"
+backgroundColor = "#F1F7F3"
+secondaryBackgroundColor = "#E1EEE6"
+textColor = "#14261D"
+primaryColor = "#1E6B4F"
+borderColor = "#C6DACE"

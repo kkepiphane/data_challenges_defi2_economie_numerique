@@ -30,6 +30,7 @@ SCENARIOS = {
     "niveau_commune": {"niv_inclusion": "Commune", "critere_inclusion": "hab_par_etab", "niv_repartition": "Canton"},
     "region_critere_distance": {"f_regions": ["Kara"], "niv_inclusion": "Région", "critere_inclusion": "dist_mediane_km"},
     "vues_carte": {"vue_carte": "Opérateurs", "couches_carte": ["Agents MM", "Établissements", "Population"]},
+    "vue_densite": {"vue_carte": "Densité", "couches_carte": ["Agents MM", "Établissements"]},
 }
 
 

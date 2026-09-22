@@ -30,7 +30,7 @@ L'application ne lit que `data_processed/` (déjà fourni). Pour tout reconstrui
 python -m src.pipeline    # data/ → data_processed/ : nettoyage, jointures, distances, 47 contrôles, dictionnaire
 python -m src.docs        # methodologie_et_limites.md (chiffres recalculés)
 python -m src.rapport     # outputs/rapport_inclusion_numerique_togo.pptx + figures
-python tests/test_app.py  # 7 pages × 16 scénarios de filtres et de niveaux (112 exécutions)
+python tests/test_app.py  # 7 pages × 17 scénarios de filtres, niveaux et vues (119 exécutions)
 ```
 
 Le pipeline cherche les contours préfectoraux dans `../defi1/data/processed/prefectures.gpkg`, puis dans
@@ -51,11 +51,12 @@ par un message explicite ; les cartes de points restent disponibles.
 
 **Filtres globaux persistants** (barre latérale) : période, région → préfecture → commune (en cascade), opérateurs,
 agents à opérateur non renseigné, catégories et statuts d'établissements, bouton « Réinitialiser ». Chaque page
-indique par des puces les filtres qu'elle applique et ceux sans objet. Tous les tableaux sont téléchargeables en CSV.
+rappelle sous son titre les filtres modifiés. Tous les tableaux sont téléchargeables en CSV.
 
 ## Identité visuelle
 
-Interface sobre : blanc dominant, encre noire, gris pour la structure. La couleur est réservée à l'information
+Interface sobre : fond blanc, encre noire, un vert institutionnel (#1E6B4F) pour les éléments actifs et des teintes
+vert pâle pour les cartes, sélecteurs et la barre latérale. Dans les graphiques, la couleur est réservée à l'information
 (trois teintes désaturées validées pour le daltonisme, rouge pour les alertes). Police Public Sans. Armoiries de la
 République togolaise en en-tête ; précisions méthodologiques dans les infobulles « i ».
 

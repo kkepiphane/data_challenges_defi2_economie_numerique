@@ -67,7 +67,7 @@ with ui.carte("carte_points"):
         hov = ("<b>Agent MM</b> · " + ag.classe_operateur + "<br>" + ag.commune + " — " + ag.canton + "<br>Établissement le plus proche : "
                + ag.dist_min_km.map(lambda v: f"{nombre(v, 1)} km" if pd.notna(v) else "—")).tolist()
         if vue == "Densité":
-            charts.couche_densite(fig, ag, rayon=8)
+            charts.couche_densite(fig, ag, rayon=7)
         elif vue == "Opérateurs":
             for cl in C.OP_CLASSES:
                 sub = ag[ag.classe_operateur == cl]
@@ -76,7 +76,11 @@ with ui.carte("carte_points"):
                                          [h for h, m in zip(hov, ag.classe_operateur == cl) if m])
         else:
             charts.couche_points(fig, ag, f"Agents MM ({entier(len(ag))})", "#8A8A84", 4, 0.35, hov)
-    if "Établissements" in couches and not fi.empty and vue != "Opérateurs":
+    if "Établissements" in couches and not fi.empty and vue == "Densité":
+        rien = False
+        charts.couche_points(fig, fi, f"Établissements ({entier(len(fi))})", T.INK, 6, 0.85,
+                             ("<b>" + fi.nom + "</b><br>" + fi.categorie + " · " + fi.commune).tolist())
+    elif "Établissements" in couches and not fi.empty and vue != "Opérateurs":
         rien = False
         carte_cat = fi.categorie.replace({"Micro-finance": "Micro-finance et mutuelles", "Mutuelle": "Micro-finance et mutuelles"})
         for cat, coul in T.CATEGORIES_CARTE.items():
@@ -91,7 +95,8 @@ with ui.carte("carte_points"):
     else:
         ui.graphique(fig, "carte_services")
     ui.source("Agents : géoportail PRISE 2021/22. Établissements : géoportail, extraction 01/2025. "
-              + ("En vue « Opérateurs », les établissements sont masqués." if vue == "Opérateurs" else ""))
+              + ("En vue « Opérateurs », les établissements sont masqués." if vue == "Opérateurs" else "")
+              + ("Zones vertes : concentration des agents MM ; points noirs : établissements." if vue == "Densité" else ""))
 
 # --------------------------------------------------------------------------------------
 st.write("")
